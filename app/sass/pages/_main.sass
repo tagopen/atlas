@@ -1,0 +1,291 @@
++comment('general style')
++font('HelveticaNeueCyr-Black', 'HelveticaNeueCyr-Black')
++font('HelveticaNeueCyr-BlackItalic', 'HelveticaNeueCyr-BlackItalic')
++font('HelveticaNeueCyr-Bold', 'HelveticaNeueCyr-Bold')
++font('HelveticaNeueCyr-BoldItalic', 'HelveticaNeueCyr-BoldItalic')
++font('HelveticaNeueCyr-Italic', 'HelveticaNeueCyr-Italic')
++font('HelveticaNeueCyr-Light', 'HelveticaNeueCyr-Light')
++font('HelveticaNeueCyr-LightItalic', 'HelveticaNeueCyr-LightItalic')
++font('HelveticaNeueCyr-Medium', 'HelveticaNeueCyr-Medium')
++font('HelveticaNeueCyr-Roman', 'HelveticaNeueCyr-Roman')
++font('HelveticaNeueCyr-Thin', 'HelveticaNeueCyr-Thin')
++font('HelveticaNeueCyr-ThinItalic', 'HelveticaNeueCyr-ThinItalic')
++font('HelveticaNeueCyr-UltraLight', 'HelveticaNeueCyr-UltraLight')
++font('HelveticaNeueCyr-UltraLightItalic', 'HelveticaNeueCyr-UltraLightItalic')
+a
+  &:hover,
+  &:focus
+    text-decoration: none
+.button
+  display: block
+  margin: 0 auto
+  font: 700 11px/16px $font-helvetica-bold
+  padding: 17px 20px
+  text-transform: uppercase
+  color: #fff
+  background-image: linear-gradient(to top, #56c5ae 0%, #61ddd6 100%)
+  border-radius: 25px
+  box-shadow: 2.5px 4.3px 7px rgba(0, 0, 0, 0.3) 
+  border: 0  
+  &:hover
+    background-image: linear-gradient(to top, #1bb192 0%, #2ad1c7 100%)
+    box-shadow: 1.5px 2.6px 7px rgba(0, 0, 0, 0.16)
+    color: #fff  
+  &--size
+    width: 100%  
++r(768)   
+  .button 
+    font: 700 18px/20px $font-helvetica-bold
+.heading
+  font: 700 18px/24px $font-helvetica-bold
+  color: #383a47   
+  text-align: center
+  text-transform: uppercase 
+  margin: 0
++r(768)      
+  .heading  
+    font: 700 24px/28px $font-helvetica-bold
++r(992)      
+  .heading  
+    font: 700 28px/30px $font-helvetica-bold    
++comment("home page style")
++comment("nav style")
+.navbar
+  padding-top: 30px
+  &__button
+    font: 700 14px/16px $font-helvetica-bold
+.logo
+  text-align: center
+  margin-bottom: 30px
+  &__img
+    display: inline-block
+    margin: 5px 5px 10px 0
+  &__text
+    display: inline-block  
+    vertical-align: top
+    font: 400 13px/16px $font-helvetica-medium
+    color: #000
+    text-align: left
+.phone
+  text-align: center
+  margin-bottom: 25px
+  &__link
+    font: 400 17px/18px $font-helvetica-medium
+    color: #010101
+  .fa
+    margin-right: 10px    
++r(768)
+  .navbar
+    &__col
+      float: right
+  .logo
+    text-align: left
+    margin-bottom: 15px
+    &__img
+      margin: 0 30px 0 0
+  .navbar
+    padding-top: 20px   
+  .logo
+    &__img
+      margin-right: 30px   
+    &__text   
+      font: 400 16px/20px $font-helvetica-medium 
+  .phone
+    margin-top: 20px
+    text-align: left
+    &__link
+      font: 400 20px/21px $font-helvetica-medium
++comment("header style")      
+.header
+  padding: 100px 0 30px
+  background: url(../img/headerbg320.png) no-repeat
+  background-size: cover
+  background-position: left top
+  &__text
+    font: 400 16px/24px $font-helvetica-medium 
+    text-shadow: 2.5px 4.3px 7px rgba(0, 0, 0, 0.21)
+    color: #fff
+    margin-bottom: 45px
+    &--span
+      display: inline
+      font: 700 16px/24px $font-helvetica-bold
+      margin: 0
+  &__col
+    text-align: center  
+  &__image
+    position: relative
+    top: 50px
+    margin-left: -25px     
++r(768)
+  .header
+    padding: 65px 0 50px 
+    background: url(../img/headerbg.png) no-repeat
+    background-size: cover
+    background-position: 57% top
+    &__col
+      text-align: left
+    &__text
+      font: 400 20px/48px $font-helvetica-medium
+      margin-bottom: 60px
+      &--span
+        font: 700 20px/48px $font-helvetica-bold
+    &__image
+      top: 130px
+      left: 50px    
++r(992)  
+  .header
+    padding: 100px 0 30px 
+    background-position: 50% top
+    &__text
+      font: 400 30px/48px $font-helvetica-medium
+      &--span
+        font: 700 30px/48px $font-helvetica-bold  
+    &__image
+      top: 180px
+      left: 0    
++comment("work style") 
+.work
+  position: relative
+  padding: 50px 0 
+  &__heading
+    margin-bottom: 120px
+  &__subheading
+    position: absolute
+    top: 120px
+    width: 100%
+    margin: 0
+    text-align: center
+    +opacity(0.6)
+    color: #dfdfdf    
+    font: 700 44px/50px $font-helvetica-bold  
+  &__image
+    text-align: center
+    margin-bottom: 45px
+  &__img
+    display: none
+    visibility: hidden
+    &--320
+      display: inline-block
+      visibility: visible
+  &-box
+    border-bottom: 2px solid #4ac3b8
+    margin-bottom: 20px
+    padding: 15px 0
+    &__img
+      text-align: center
+      margin: 0 auto
+      max-width: 66px
+      img
+        display: inline-block
+    &__content
+      line-height: 62px
+      font-size: 0   
+    &__text
+      display: inline-block
+      vertical-align: middle
+      font: 700 12px/14px $font-helvetica-bold 
+      color: #000    
+      margin-bottom: 0  
+      &--span
+        color: #4ec5bb 
+      &--right
+        text-align: right     
++r(768) 
+  .work
+    &__heading
+      margin-bottom: 45px
+    &__subheading
+      font: 700 100px/110px $font-helvetica-bold  
+      top: 120px
+    &__image
+      margin-bottom: 55px  
+    &__img
+      display: none
+      visibility: hidden 
+      &--768
+        display: inline-block
+        visibility: visible
+    &__item
+      padding-right: 30px
+      &--right
+        padding-left: 30px
+        padding-right: 15px    
+    &-box
+      margin-bottom: 55px
+      &__img
+        max-width: 80px
+      &__content
+        line-height: 74px      
++r(992)  
+  .work
+    &__col
+      position: relative
+    &__heading
+      margin-bottom: 60px
+    &__subheading
+      font: 700 150px/160px $font-helvetica-bold   
+      top: 90px
+    &__image
+      margin-bottom: 0
+      position: absolute
+      left: 50%
+      margin-left: -229px  
+    &__img
+      display: none
+      visibility: hidden 
+      &--1200
+        display: inline-block
+        visibility: visible    
+    &__item
+      margin: 1px
+      &--right
+        float: right   
+    &-box
+      padding: 30px 0 20px
+      margin-bottom: 150px      
++r(1200)   
+  .work
+    &__subheading
+      font: 700 180px/190px $font-helvetica-bold         
++comment("opportunity style")    
+.opportunity
+  &__heading
+    margin-bottom: 60px
+  &__image
+    text-align: center
+    margin-bottom: 30px
+    img
+      display: inline-block
+  &__title
+    font: 700 16px/20px $font-helvetica-bold  
+    color: #000   
+    margin-bottom: 20px
+  &__text 
+    font: 400 16px/20px $font-helvetica-medium
+    color: #000     
+    margin-bottom: 60px
+  &__button
+    margin-bottom: 50px  
++r(768)  
+  .opportunity 
+    background: url(../img/opportunitybg.png) no-repeat
+    background-size: cover
+    background-position: 50% 100%
+    padding: 0 0 50px 
+    &__col
+      float: right
+    &__title
+      font: 700 20px/30px $font-helvetica-bold 
+      margin-bottom: 35px
+    &__text
+      font: 400 20px/30px $font-helvetica-medium  
+    &__button
+      margin-bottom: 80px     
++r(992)  
+  .opportunity
+    padding-top: 50px
+    &__title
+      font: 700 24px/30px $font-helvetica-bold 
+      margin-bottom: 25px
+    &__text
+      font: 400 22px/30px $font-helvetica-medium 
