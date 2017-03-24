@@ -18,77 +18,74 @@ $(function() {
   });
 });
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-/*$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});*/
+// Masked phone
+$(function($){
+  $(".form__input--phone").mask("+38(999)999-99-99");
+});
 
-
-// Fixed navbar on Scroll
-/*if(!$('.navbar-toggle').is(':visible')) {
-  $('.navbar').affix({
-    offset: {
-      top: $('header').innerHeight()
+// Equal Height function
+function setEqualHeight(columns)
+{
+  var tallestcolumn = 0;
+  columns.each(
+    function()
+    {
+      currentHeight = $(this).height();
+      if(currentHeight > tallestcolumn)
+      {
+        tallestcolumn = currentHeight;
+      }
     }
-  }); 
-}*/
+    );
+  columns.height(tallestcolumn);
+}
 
-// Highlight the top nav as scrolling occurs
-/*$('body').scrollspy({
-    target: '.navbar-fixed-top'
-})*/
-
-// Navbar class active
-/*$(document).ready( function () {
-  $(".nav li").click( function () {
-    $(".nav li").removeClass("active");
-    $(this).addClass("active");
-  });
-});*/
-
-// Dropdowns on hover on desktop
-/*var navbarToggle = '.navbar-toggle'; // name of navbar toggle, BS3 = '.navbar-toggle', BS4 = '.navbar-toggler'  
-$('.dropdown, .dropup').each(function() {
-  var dropdown = $(this),
-    dropdownToggle = $('[data-toggle="dropdown"]', dropdown),
-    dropdownHoverAll = dropdownToggle.data('dropdown-hover-all') || false;
-  
-  // Mouseover
-  dropdown.hover(function(){
-    var notMobileMenu = $(navbarToggle).size() > 0 && $(navbarToggle).css('display') === 'none' && $(document).width() >= 992 ;
-    if ((dropdownHoverAll === true || (dropdownHoverAll === false && notMobileMenu))) { 
-      dropdownToggle.trigger('click');
-    }
-  });
-});*/
-
-
-// Close dropdowns on "esc"
-/*$('.dropdown-menu').bind('keydown',function(event) {
-  // ESC = Keycode 27
-  if (event.keyCode == 27) {
-    $(this).parrent().find('.dropdown-toggle').dropdown('toggle');
+// Equial Height
+$(window).on('resize', function(){
+  // Only 768px +
+  if( $( window ).width() >= 768 ) {
+    // section problem
+    setEqualHeight($('.issue__content'));
   }
-});*/
+}).trigger('resize');
 
-// Closes the Responsive Menu on Menu Item Click
-/*$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
-});*/
+// Fancy Box
+if ($("a.fancyimage").length) {
+  $("a.fancyimage").fancybox(); 
+}
 
-// Equal height
-/*$('.equial').equialHeight();*/
-
-/*$('.slider').slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
+// Console slider options
+$('.console-slider').slick({
   slidesToShow: 1,
-  adaptiveHeight: true
-});*/
+  slidesToScroll: 1,
+  arrows: false,
+  dots: false,
+  asNavFor: '.console-slider-preview'
+});
+$('.console-slider-preview').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.console-slider',
+  dots: false,
+  focusOnSelect: true,
+  mobileFirst: true,
+  prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button"></button>',
+  nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"></button>',
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true
+      }
+    },
+    {
+      breakpoint: 0,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});

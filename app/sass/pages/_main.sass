@@ -1,21 +1,11 @@
 +comment('general style')
-+font('HelveticaNeueCyr-Black', 'HelveticaNeueCyr-Black')
-+font('HelveticaNeueCyr-BlackItalic', 'HelveticaNeueCyr-BlackItalic')
-+font('HelveticaNeueCyr-Bold', 'HelveticaNeueCyr-Bold')
-+font('HelveticaNeueCyr-BoldItalic', 'HelveticaNeueCyr-BoldItalic')
-+font('HelveticaNeueCyr-Italic', 'HelveticaNeueCyr-Italic')
-+font('HelveticaNeueCyr-Light', 'HelveticaNeueCyr-Light')
-+font('HelveticaNeueCyr-LightItalic', 'HelveticaNeueCyr-LightItalic')
-+font('HelveticaNeueCyr-Medium', 'HelveticaNeueCyr-Medium')
-+font('HelveticaNeueCyr-Roman', 'HelveticaNeueCyr-Roman')
-+font('HelveticaNeueCyr-Thin', 'HelveticaNeueCyr-Thin')
-+font('HelveticaNeueCyr-ThinItalic', 'HelveticaNeueCyr-ThinItalic')
-+font('HelveticaNeueCyr-UltraLight', 'HelveticaNeueCyr-UltraLight')
-+font('HelveticaNeueCyr-UltraLightItalic', 'HelveticaNeueCyr-UltraLightItalic')
 a
   &:hover,
   &:focus
     text-decoration: none
+.help-block
+  padding: 0
+  margin: 0    
 .button
   display: block
   margin: 0 auto
@@ -42,12 +32,33 @@ a
   text-align: center
   text-transform: uppercase 
   margin: 0
+  &--color
+    color: #fff
 +r(768)      
   .heading  
     font: 700 24px/28px $font-helvetica-bold
 +r(992)      
   .heading  
-    font: 700 28px/30px $font-helvetica-bold    
+    font: 700 28px/30px $font-helvetica-bold 
+.form
+  &__input
+    padding: 22px 20px 20px 45px
+    color: rgba(30,22,15,0.5)
+    font: 400 18px/20px $font-helvetica-medium
+    background-color: #fff
+    border: 0    
+    &:focus
+      color: rgba(30,22,15,1)
+      & ~ .fa
+        color: rgba(30,22,15,1)
+  &-group
+    position: relative
+    .fa
+      position: absolute
+      left: 30px
+      top: 23px      
+      color: rgba(30,22,15,0.5)
+      font-size: 18px
 +comment("home page style")
 +comment("nav style")
 .navbar
@@ -289,3 +300,272 @@ a
       margin-bottom: 25px
     &__text
       font: 400 22px/30px $font-helvetica-medium 
++comment("service style") 
+.service
+  padding: 65px 0 30px
+  background: url(../img/servicebg320.png) no-repeat
+  background-size: cover   
+  background-position: center center
+  margin-top: -10px
+  &__heading
+    margin-bottom: 25px 
+  &__img
+    margin-bottom: 30px
+  &__text
+    font: 400 16px/20px $font-helvetica-light
+    color: #fff 
+    margin-bottom: 40px 
+  &__subtext
+    font: 400 11px/16px $font-helvetica-medium  
+    color: #fff
+    margin-top: 20px
++r(768)
+  .service  
+    background: url(../img/servicebg1200.png) no-repeat 
+    background-size: cover   
+    background-position: center center
+    &__heading
+      margin-bottom: 40px
+    &__text
+      font: 400 20px/24px $font-helvetica-light
+    &__subtext
+      font: 400 14px/18px $font-helvetica-medium     
++r(992)      
+  .service
+    margin-top: -20px
+    &__text
+      font: 400 29px/32px $font-helvetica-light
++r(1200)  
+  .service
+    margin-top: -40px   
++r(1366)        
+  .service
+    margin-top: -52px
++comment("problem style")     
+.problem
+  padding: 25px 0 65px
+  background: url(../img/problembg.png) no-repeat
+  background-size: cover
+  &__img
+    text-align: left
+    margin-bottom: 30px
+    img
+      display: inline-block
+  &__content
+    background-color: rgba(255,255,255,0.77)
+    box-shadow: 2.5px 4.3px 7px rgba(0, 0, 0, 0.26)
+    padding: 30px 0 10px
+.issue
+  padding: 20px 15px 
+  &__content
+    &--right
+      text-align: right
+  &__heading
+    font: 700 12px/24px $font-helvetica
+    margin: 0 0 10px
+    color: #000   
+    text-transform: uppercase
+  &__text
+    font: 400 12px/24px $font-helvetica-medium
+    margin: 0
+    color: #000   
+  &__icon
+    text-align: center
+    margin-right: -25px
+    img
+      display: inline-block  
++r(768)  
+  .problem
+    &__img
+      text-align: center     
+    &__content
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 50%
+        height: 100%
+        width: 2px
+        margin-left: -1px
+        background-color: rgba(56,58,71,0.21)   
+  .issue
+    &__col
+      float: right   
+    &__icon
+      margin: 0 -5px   
+    &__heading
+      font: 700 16px/36px $font-helvetica 
+    &__text   
+      font: 400 16px/30px $font-helvetica-medium
++r(992)     
+  .issue 
+    &__heading
+      font: 700 18px/36px $font-helvetica 
+    &__text   
+      font: 400 20px/30px $font-helvetica-medium  
++comment("console slider style")  
+.console
+  padding: 50px 0
+  &-slider
+    border: 1px solid #d7d7d7
+    margin-bottom: 40px
+    &__item
+      position: relative
+    &__link
+      display: block
+      padding: 40px 15px 10px
+      text-align: center
+      &:hover
+        .console-slider__zoom
+          color: #20bba3
+      img
+        display: inline-block  
+    &__zoom
+      position: absolute
+      top: 25px
+      right: 25px    
+      font-size: 28px
+      cursor: pointer
+      color: #000
+    &-preview
+      &__item
+        text-align: center
+        padding: 5px 15px
+        cursor: pointer
+        img
+          display: inline-block   
+      .slick
+        &-current
+          img
+            box-shadow: 0px 0px 0px 2px rgba(70,70,70,1)
+        &-arrow
+          width: 16px
+          height: 22px
+          &:before      
+            display: inline-block
+            font-family: 'FontAwesome'  
+            color: #2e303e
+            font-size: 22px
+          &:hover  
+            &:before
+              color: #111217
+        &-prev
+          &:before
+            content: '\f053' 
+        &-next
+          &:before
+            content: '\f054' 
+.fancybox
+  &-prev
+    left: -15px
+    bottom: -15px
+    top: auto
+  &-next
+    right: -15px
+    bottom: -15px 
+    top: auto 
++r(1200)  
+  .console
+    &__col
+      float: right
+  .fancybox
+    &-prev
+      left: -65px
+      bottom: auto
+      top: 50%
+      margin-top: -25px
+    &-next
+      right: -65px
+      bottom: auto
+      top: 50% 
+      margin-top: -25px 
++comment("characteristic style") 
+.characteristic 
+  &__heading
+    margin: 0 0 35px
+    font: 400 18px/24px $font-helvetica-medium
+    color: #000
+    &--span
+      font: 700 18px/24px $font-helvetica
+      color: #20bba3
+  &__price    
+    font: 700 18px/24px $font-helvetica
+    color: #000
+    margin-bottom: 30px
+.table
+  &__heading
+    font: 400 18px/24px $font-helvetica-medium
+    text-transform: uppercase
+    color: #5f5f5f
+    margin-bottom: 10px
+    .fa
+      font-size: 20px
+      margin-right: 10px 
+  &__row
+    border-bottom: 1px solid rgba(0,0,0,0.3)
+    padding: 8px 0 10px 
+    &--1
+      border-top: 1px solid rgba(0,0,0,0.3)
+  &__text
+    font: 400 17px/20px $font-helvetica-medium
+    color: #000   
+    margin: 0  
+  &__link  
+    font: 400 16px/20px $font-helvetica-medium
+    color: #5f5f5f
+    text-decoration: underline
+    &:hover,
+    &:focus
+      color: #20bba3
+      text-decoration: underline
+      text-decoration-color: #20bba3 !important
+  &__btn
+    margin: 20px 0   
+.way
+  &__icon
+    display: block
+    margin: 10px auto 0
+    width: 48px
+    height: 35px
+    background: url(../img/icons/car.png) no-repeat
+    background-size: contain  
+  &__text  
+    font: 400 13px/18px $font-helvetica-medium
+    color: #000
+    margin: 0
++r(768)
+  .way
+    &__text  
+      font: 400 18px/24px $font-helvetica-medium 
++comment("question style")      
+.question
+  padding: 50px 0
+  background: url(../img/questionbg.png) no-repeat      
+  background-size: cover   
+  background-position: center center
+  margin-top: -10px
+  &__heading
+    margin-bottom: 50px
+  &__text  
+    font: 400 16px/20px $font-helvetica-light
+    color: #fff 
+    margin-bottom: 25px
+  &__subtext  
+    font: 400 16px/20px $font-helvetica-medium
+    color: #fff 
+    margin-bottom: 30px
++r(768)
+  .question
+    &__text   
+      font: 400 26px/32px $font-helvetica-light 
+    &__subtext  
+      font: 400 20px/24px $font-helvetica-medium
+    &__btn
+      padding: 21px 20px  
++r(992)
+  .question
+    &__text   
+      font: 400 30px/36px $font-helvetica-light  
+    &__subtext  
+      font: 400 24px/28px $font-helvetica-medium      

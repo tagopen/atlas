@@ -1,0 +1,24 @@
+section.question
+  .container
+    .row
+      .col-xs-12
+        h2.heading.question__heading.heading--color Остались вопросы?
+      .col-xs-12 
+        .service__content
+          .row
+            .col-xs-12.col-md-8.col-md-offset-2.text-center
+              p.question__text Укажите свой номер телефона и мы с вами свяжемся  в течении 10 минут, в рабочее время.
+              p.question__subtext Выберите удобный способ общения:
+              form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
+                .row
+                  .col-xs-12
+                    .row
+                      .form-group.col-xs-12.col-sm-6
+                        input.form-control.form__input.form__phone.form__input--phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+                        i.fa.fa-phone(aria-hidden="true")
+                        p.help-block.text-danger
+                      .success
+                      .col-xs-12.col-sm-6     
+                        .text-center
+                          button.btn.button.button--size.question__btn(name='Заказать обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Связаться с менеджером
+                          

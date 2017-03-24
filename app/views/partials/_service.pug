@@ -1,0 +1,32 @@
+section.service
+  .container
+    .row
+      .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-4
+        h2.heading.service__heading.heading--color Узнайте все 17 возможностей приставки ATLAS BOX PRO 
+      .col-xs-8.col-xs-offset-2.col-sm-4.col-sm-offset-0
+        .service__img
+          img.img-responsive(src='img/service1.png' alt='картинка')
+      .col-xs-12.col-sm-8  
+        .service__content
+          .row
+            .col-xs-12.text-center
+              p.service__text Заполните форму ниже и вы получите PDF файл с описанием всех возможностей этой приставки, и список телеканалов, к которым вы получите доступ . 
+            .col-xs-12
+              form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
+                .row
+                  .col-xs-12.col-sm-8.col-sm-offset-2.col-md-12.col-md-offset-0
+                    .row
+                      .form-group.col-xs-12.col-md-6
+                        input.form-control.form__input.form__phone.form__input--phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+                        i.fa.fa-phone(aria-hidden="true")
+                        p.help-block.text-danger
+                      .form-group.col-xs-12.col-md-6
+                        input.form-control.form__input.form__name(aria-invalid='false', placeholder='Введите ваш email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='email')
+                        i.fa.fa-envelope(aria-hidden="true")
+                        p.help-block.text-danger
+                      .clearfix
+                        .success
+                  .col-xs-12.col-md-9.col-md-offset-2.col-lg-8      
+                    .text-center
+                      button.btn.button.button--size(name='Заказать обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать все возможности приставки
+                      p.service__subtext * Гарантируем полную конфиденциальность. Ваши данные не будут переданы третьим лицам
