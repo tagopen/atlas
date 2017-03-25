@@ -2178,21 +2178,7 @@ a:hover, a:focus {
 }
 
 .bonus__heading {
-  position: relative;
   margin-bottom: 45px;
-}
-
-.bonus__heading--half {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  white-space: nowrap;
-  color: #fff;
-  -webkit-clip-path: inset(0 50% 0 0);
-          clip-path: inset(0 50% 0 0);
-  overflow: hidden;
 }
 
 .bonus__info {
