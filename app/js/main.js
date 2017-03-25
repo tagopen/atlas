@@ -120,3 +120,24 @@ $('.comment__slider').slick({
     }
   ]
 });
+
+// Video scroll
+$(document).ready( function() {
+  $('.video-preview__link').click(function(){
+    $("html, body").animate({ scrollTop: $(".video").offset().top }, 2000);
+    return false;
+  });
+});
+
+$(document).ready(function(){
+  function videoShow(){
+    $('.video-preview').fadeIn('slow');
+  }
+  setTimeout (videoShow, 5000);
+});
+
+$(document).ready(function(){
+  $(".video-preview__close").click(function() {
+    $(".video-preview").fadeOut();
+  });
+});

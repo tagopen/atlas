@@ -705,6 +705,46 @@ a
   &__iframe
     height: 160px
     width: 100%
+  &-preview
+    bottom: 200px
+    left: -135px
+    z-index: 50
+    display: none
+    &__content
+      position: relative
+      width: 162px
+    &__close
+      position: absolute
+      top: -15px
+      left: 310px  
+      cursor: pointer
+      color: #383a47
+      &:hover
+        color: #20bba3
+    &__link  
+      border-radius: 15px
+      width: 162px
+      background-color: #fff
+      box-shadow: 0 0 19px 0 rgba(50,50,50,.2)
+      cursor: pointer
+      position: absolute
+      left: 150px
+      z-index: 25
+      transition: box-shadow .3s
+      outline: none
+      &:hover
+        box-shadow: 0 0 30px 0 #20bba3
+    &__text
+      font: 400 14px/18px $font-helvetica-medium 
+      color: #383a47
+      padding: 10px 15px
+      text-align: center  
+      text-decoration: underline
+    &__image
+      background: url(../img/icons/videopreview.png) no-repeat
+      width: 162px
+      height: 91px
+      border-radius: 0 0 15px 15px
 +r(768)
   .video
     &__iframe
