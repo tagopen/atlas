@@ -1540,24 +1540,89 @@ a:hover, a:focus {
 }
 
 .graph__image {
-  display: inline-block;
+  margin: 0 auto;
+}
+
+.point {
+  display: block;
+  position: absolute;
 }
 
 .point__text {
   font: 400 14px/18px "HelveticaNeueCyr-Medium", sans-serif;
   color: #383a47;
+  text-align: left;
+  margin: 0;
 }
 
 .point__text--span {
   font: 700 18px/20px "HelveticaNeueCyr-Bold", sans-serif;
 }
 
+.point--1 {
+  width: 55%;
+  top: 25px;
+  left: 45%;
+}
+
+.point--2 {
+  width: 55%;
+  left: 0;
+  top: 200px;
+}
+
+.point--3 {
+  width: 48%;
+  top: 290px;
+  left: 54%;
+}
+
+.point--4 {
+  width: 54%;
+  left: 0;
+  top: 400px;
+}
+
+.point--5 {
+  width: 60%;
+  left: 0;
+  top: 600px;
+}
+
 @media only screen and (min-width: 768px) {
+  .stats {
+    padding: 65px 0 160px;
+  }
   .point__text {
     font: 400 16px/18px "HelveticaNeueCyr-Medium", sans-serif;
   }
   .point__text--span {
     font: 700 25px/30px "HelveticaNeueCyr-Bold", sans-serif;
+  }
+  .point--1 {
+    width: 200px;
+    left: 50px;
+    top: 400px;
+  }
+  .point--2 {
+    width: 228px;
+    left: 30px;
+    top: 80px;
+  }
+  .point--3 {
+    width: 260px;
+    top: 300px;
+    left: 320px;
+  }
+  .point--4 {
+    width: 240px;
+    left: 300px;
+    top: 40px;
+  }
+  .point--5 {
+    width: 260px;
+    left: 475px;
+    top: 150px;
   }
 }
 
@@ -1567,5 +1632,102 @@ a:hover, a:focus {
   }
   .point__text--span {
     font: 700 36px/40px "HelveticaNeueCyr-Bold", sans-serif;
+  }
+  .point--1 {
+    width: 270px;
+    left: 100px;
+    top: 400px;
+  }
+  .point--2 {
+    width: 280px;
+    left: 20px;
+    top: 90px;
+  }
+  .point--3 {
+    width: 300px;
+    top: 305px;
+    left: 370px;
+  }
+  .point--4 {
+    width: 280px;
+    left: 300px;
+    top: 30px;
+  }
+  .point--5 {
+    width: 310px;
+    left: 550px;
+    top: 160px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .point--1 {
+    top: 470px;
+    left: 130px;
+  }
+  .point--2 {
+    left: 40px;
+    top: 110px;
+  }
+  .point--3 {
+    top: 350px;
+    left: 475px;
+  }
+  .point--4 {
+    left: 340px;
+    top: 65px;
+  }
+  .point--5 {
+    width: 400px;
+    left: 650px;
+    top: 190px;
+  }
+}
+
+/* ---------------------------------------- */
+/* C O N N E C T    S T Y L E               */
+/* ---------------------------------------- */
+.connect {
+  padding: 60px 0 40px;
+  background: url(../img/connectbg.png) no-repeat;
+  background-size: cover;
+}
+
+.connect__container {
+  background: rgba(255, 255, 255, 0.77);
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.connect__heading {
+  margin-bottom: 25px;
+}
+
+.connect__list {
+  padding-left: 0;
+}
+
+.connect__item {
+  font: 400 16px/24px "HelveticaNeueCyr-Medium", sans-serif;
+  list-style-type: none;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.connect__item:before {
+  content: '\f00c';
+  color: #000;
+  display: inline-block;
+  font-family: 'FontAwesome';
+  margin-right: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .connect__col {
+    float: right;
+  }
+  .connect__item {
+    font: 400 22px/24px "HelveticaNeueCyr-Medium", sans-serif;
+    margin-bottom: 25px;
   }
 }

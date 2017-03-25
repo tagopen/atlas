@@ -701,22 +701,137 @@ a
     position: relative
     text-align: center
   &__image
-    display: inline-block
+    margin: 0 auto
 .point
+  display: block
+  position: absolute
   &__text
     font: 400 14px/18px $font-helvetica-medium
     color: #383a47 
+    text-align: left
+    margin: 0
     &--span
       font: 700 18px/20px $font-helvetica-bold
+  &--1
+    width: 55%
+    top: 25px
+    left: 45%  
+  &--2
+    width: 55%
+    left: 0
+    top: 200px
+  &--3
+    width: 48%
+    top: 290px
+    left: 54% 
+  &--4
+    width: 54%
+    left: 0
+    top: 400px    
+  &--5
+    width: 60%
+    left: 0
+    top: 600px     
 +r(768) 
+  .stats
+    padding: 65px 0 160px
   .point
     &__text
       font: 400 16px/18px $font-helvetica-medium
       &--span
         font: 700 25px/30px $font-helvetica-bold
+    &--1
+      width: 200px
+      left: 50px
+      top: 400px
+    &--2
+      width: 228px
+      left: 30px
+      top: 80px
+    &--3
+      width: 260px 
+      top: 300px
+      left: 320px 
+    &--4
+      width: 240px  
+      left: 300px
+      top: 40px
+    &--5
+      width: 260px
+      left: 475px
+      top: 150px        
 +r(992)
   .point
     &__text
       font: 400 18px/24px $font-helvetica-medium
       &--span
-        font: 700 36px/40px $font-helvetica-bold       
+        font: 700 36px/40px $font-helvetica-bold  
+    &--1
+      width: 270px
+      left: 100px
+      top: 400px   
+    &--2
+      width: 280px
+      left: 20px
+      top: 90px
+    &--3
+      width: 300px
+      top: 305px
+      left: 370px
+    &--4
+      width: 280px
+      left: 300px
+      top: 30px
+    &--5
+      width: 310px
+      left: 550px
+      top: 160px
++r(1200)   
+  .point
+    &--1
+      top: 470px 
+      left: 130px 
+    &--2
+      left: 40px
+      top: 110px
+    &--3
+      top: 350px
+      left: 475px
+    &--4  
+      left: 340px
+      top: 65px
+    &--5
+      width: 400px
+      left: 650px
+      top: 190px
++comment("connect style") 
+.connect
+  padding: 60px 0 40px
+  background: url(../img/connectbg.png) no-repeat
+  background-size: cover
+  &__container
+    background: rgba(255,255,255,0.77)
+    padding-top: 25px
+    padding-bottom: 25px
+  &__heading
+    margin-bottom: 25px  
+  &__list
+    padding-left: 0
+  &__item
+    font: 400 16px/24px $font-helvetica-medium
+    list-style-type: none
+    color: #000    
+    margin-bottom: 20px
+    &:before
+      content: '\f00c'
+      color: #000
+      display: inline-block
+      font-family: 'FontAwesome'
+      margin-right: 5px
++r(768)
+  .connect
+    &__col
+      float: right
+    &__item      
+      font: 400 22px/24px $font-helvetica-medium
+      margin-bottom: 25px
