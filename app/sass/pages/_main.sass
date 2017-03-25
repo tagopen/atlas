@@ -1146,7 +1146,18 @@ a
     left: 0
     background-image: linear-gradient(to top, #2a9680 0%, #2ad1c7 100%)
   &__heading
+    position: relative
     margin-bottom: 45px  
+    &--half
+      position: absolute
+      display: block
+      top: 0
+      left: 0
+      width: 100%
+      white-space: nowrap
+      color: #fff
+      clip-path: inset(0 50% 0 0)
+      overflow: hidden
   &__info
     font: 400 16px/24px $font-helvetica-medium
     color: #000    
