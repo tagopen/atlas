@@ -555,6 +555,58 @@ a
     font: 400 16px/20px $font-helvetica-medium
     color: #fff 
     margin-bottom: 30px
+  &__radio
+    &-group
+      position: relative
+      margin-bottom: 25px  
+    &-ic
+      display: inline-block
+      height: 40px
+      width: 40px
+      position: absolute  
+      left: 0px
+      top: -12px
+      &--1
+        background: url(../img/icons/radio1.png) no-repeat
+        background-size: contain
+      &--2
+        background: url(../img/icons/radio2.png) no-repeat
+        background-size: contain
+.radio-btn
+  &__text
+    display: inline-block
+    padding-left: 50px
+  &__control   
+    display: none     
+    &:checked+.radio-btn__box 
+      .radio-btn__icon
+        border: 2px solid #fff
+        &:before      
+          position: absolute
+          content: "\f00c"
+          font-family: "FontAwesome"
+          font-size: 33px
+          color: #fff
+          width: 30px
+          height: 30px
+          line-height: 18px
+          text-align: center
+          left: 0
+          top: 0   
+  &__box--check   
+    display: block 
+    color: #fff
+    font: 400 14px/18px $font-helvetica-medium
+    text-align: left
+  &__icon  
+    float: right
+    position: relative
+    display: inline-block
+    height: 30px
+    width: 30px
+    margin-top: -5px
+    background-color: transparent
+    border: 2px solid #fff
 +r(768)
   .question
     &__text   
@@ -562,10 +614,109 @@ a
     &__subtext  
       font: 400 20px/24px $font-helvetica-medium
     &__btn
-      padding: 21px 20px  
+      padding: 21px 20px 
+    &__radio
+      &-group
+        margin-bottom: 55px
+      &-ic
+        height: 45px
+        width: 45px   
+  .radio-btn
+    &__box--check    
+      font: 400 20px/24px $font-helvetica-medium
+  &__icon   
 +r(992)
   .question
     &__text   
       font: 400 30px/36px $font-helvetica-light  
     &__subtext  
-      font: 400 24px/28px $font-helvetica-medium      
+      font: 400 24px/28px $font-helvetica-medium 
++comment("video style")             
+.video
+  padding: 55px 0 70px
+  background: url(../img/videobg.png) no-repeat
+  background-size: cover
+  &__heading
+    margin-bottom: 35px 
+  &__iframe
+    height: 160px
+    width: 100%
++r(768)
+  .video
+    &__iframe
+      height: 400px   
++r(992)
+  .video
+    &__iframe
+      height: 460px  
++comment("part style")  
+.part
+  padding: 50px 0 
+  &__heading
+    margin-bottom: 30px
+.element
+  &__image
+    text-align: center
+    margin-bottom: 25px
+    img
+      display: inline-block
+  &__text
+    font: 400 18px/24px $font-helvetica-medium 
+    text-align: center
+    color: #000
+    margin-bottom: 30px
+  &__number
+    font: 400 150px/160px $font-helvetica-bold
+    text-align: center    
+    color: rgba(0,0,0,0.2)  
++r(768)
+  .part
+    padding: 70px 0  
+    &__heading
+      margin-bottom: 40px
+  .element    
+    &__image
+      margin-bottom: 35px
+    &__text
+      font: 400 20px/24px $font-helvetica-medium 
+    &__number
+      margin-bottom: 50px  
++r(992)    
+  .part
+    &__heading
+      margin-bottom: 50px  
+  .element    
+    &__text
+      font: 400 22px/26px $font-helvetica-medium  
+    &__number
+      font: 400 170px/180px $font-helvetica-bold   
++comment("stats style")  
+.stats
+  padding: 50px 0
+  background-color: #f3f3f3
+  &__heading
+    margin-bottom: 35px
+.graph    
+  &__content
+    position: relative
+    text-align: center
+  &__image
+    display: inline-block
+.point
+  &__text
+    font: 400 14px/18px $font-helvetica-medium
+    color: #383a47 
+    &--span
+      font: 700 18px/20px $font-helvetica-bold
++r(768) 
+  .point
+    &__text
+      font: 400 16px/18px $font-helvetica-medium
+      &--span
+        font: 700 25px/30px $font-helvetica-bold
++r(992)
+  .point
+    &__text
+      font: 400 18px/24px $font-helvetica-medium
+      &--span
+        font: 700 36px/40px $font-helvetica-bold       

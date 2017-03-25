@@ -13,6 +13,23 @@ section.question
                 .row
                   .col-xs-12
                     .row
+                      .col-xs-12
+                        .row
+                          .col-xs-12.col-sm-6
+                            .question__radio-group.radio-btn
+                              .question__radio-ic.question__radio-ic--1
+                              input#question-12.radio-btn__control(type='radio', name='question1')
+                              label.clearfix.radio-btn__box.radio-btn__box--check(name='question1', for='question-12')
+                                span.radio-btn__text Позвоните мне на телефон
+                                span.radio-btn__icon.radio-btn__icon--check
+                          .col-xs-12.col-sm-6  
+                            .question__radio-group.radio-btn
+                              .question__radio-ic.question__radio-ic--2
+                              input#question-11.radio-btn__control(type='radio', name='question1')
+                              label.clearfix.radio-btn__box.radio-btn__box--check(name='question1', for='question-11')
+                                span.radio-btn__text Напишите мне в Viber 
+                                span.radio-btn__icon.radio-btn__icon--check
+                    .row
                       .form-group.col-xs-12.col-sm-6
                         input.form-control.form__input.form__phone.form__input--phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
                         i.fa.fa-phone(aria-hidden="true")
@@ -21,4 +38,5 @@ section.question
                       .col-xs-12.col-sm-6     
                         .text-center
                           button.btn.button.button--size.question__btn(name='Заказать обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Связаться с менеджером
+                    
                           

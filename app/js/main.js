@@ -46,6 +46,8 @@ $(window).on('resize', function(){
   if( $( window ).width() >= 768 ) {
     // section problem
     setEqualHeight($('.issue__content'));
+    setEqualHeight($('.element__image'));
+    setEqualHeight($('.element__text'));
   }
 }).trigger('resize');
 

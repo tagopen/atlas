@@ -1329,6 +1329,75 @@ a:hover, a:focus {
   margin-bottom: 30px;
 }
 
+.question__radio-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.question__radio-ic {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 0px;
+  top: -12px;
+}
+
+.question__radio-ic--1 {
+  background: url(../img/icons/radio1.png) no-repeat;
+  background-size: contain;
+}
+
+.question__radio-ic--2 {
+  background: url(../img/icons/radio2.png) no-repeat;
+  background-size: contain;
+}
+
+.radio-btn__text {
+  display: inline-block;
+  padding-left: 50px;
+}
+
+.radio-btn__control {
+  display: none;
+}
+
+.radio-btn__control:checked + .radio-btn__box .radio-btn__icon {
+  border: 2px solid #fff;
+}
+
+.radio-btn__control:checked + .radio-btn__box .radio-btn__icon:before {
+  position: absolute;
+  content: "\f00c";
+  font-family: "FontAwesome";
+  font-size: 33px;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  line-height: 18px;
+  text-align: center;
+  left: 0;
+  top: 0;
+}
+
+.radio-btn__box--check {
+  display: block;
+  color: #fff;
+  font: 400 14px/18px "HelveticaNeueCyr-Medium", sans-serif;
+  text-align: left;
+}
+
+.radio-btn__icon {
+  float: right;
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin-top: -5px;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
 @media only screen and (min-width: 768px) {
   .question__text {
     font: 400 26px/32px "HelveticaNeueCyr-Light", sans-serif;
@@ -1339,6 +1408,16 @@ a:hover, a:focus {
   .question__btn {
     padding: 21px 20px;
   }
+  .question__radio-group {
+    margin-bottom: 55px;
+  }
+  .question__radio-ic {
+    height: 45px;
+    width: 45px;
+  }
+  .radio-btn__box--check {
+    font: 400 20px/24px "HelveticaNeueCyr-Medium", sans-serif;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -1347,5 +1426,146 @@ a:hover, a:focus {
   }
   .question__subtext {
     font: 400 24px/28px "HelveticaNeueCyr-Medium", sans-serif;
+  }
+}
+
+/* ---------------------------------------- */
+/* V I D E O    S T Y L E                   */
+/* ---------------------------------------- */
+.video {
+  padding: 55px 0 70px;
+  background: url(../img/videobg.png) no-repeat;
+  background-size: cover;
+}
+
+.video__heading {
+  margin-bottom: 35px;
+}
+
+.video__iframe {
+  height: 160px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .video__iframe {
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .video__iframe {
+    height: 460px;
+  }
+}
+
+/* ---------------------------------------- */
+/* P A R T    S T Y L E                     */
+/* ---------------------------------------- */
+.part {
+  padding: 50px 0;
+}
+
+.part__heading {
+  margin-bottom: 30px;
+}
+
+.element__image {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.element__image img {
+  display: inline-block;
+}
+
+.element__text {
+  font: 400 18px/24px "HelveticaNeueCyr-Medium", sans-serif;
+  text-align: center;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.element__number {
+  font: 400 150px/160px "HelveticaNeueCyr-Bold", sans-serif;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 768px) {
+  .part {
+    padding: 70px 0;
+  }
+  .part__heading {
+    margin-bottom: 40px;
+  }
+  .element__image {
+    margin-bottom: 35px;
+  }
+  .element__text {
+    font: 400 20px/24px "HelveticaNeueCyr-Medium", sans-serif;
+  }
+  .element__number {
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .part__heading {
+    margin-bottom: 50px;
+  }
+  .element__text {
+    font: 400 22px/26px "HelveticaNeueCyr-Medium", sans-serif;
+  }
+  .element__number {
+    font: 400 170px/180px "HelveticaNeueCyr-Bold", sans-serif;
+  }
+}
+
+/* ---------------------------------------- */
+/* S T A T S    S T Y L E                   */
+/* ---------------------------------------- */
+.stats {
+  padding: 50px 0;
+  background-color: #f3f3f3;
+}
+
+.stats__heading {
+  margin-bottom: 35px;
+}
+
+.graph__content {
+  position: relative;
+  text-align: center;
+}
+
+.graph__image {
+  display: inline-block;
+}
+
+.point__text {
+  font: 400 14px/18px "HelveticaNeueCyr-Medium", sans-serif;
+  color: #383a47;
+}
+
+.point__text--span {
+  font: 700 18px/20px "HelveticaNeueCyr-Bold", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  .point__text {
+    font: 400 16px/18px "HelveticaNeueCyr-Medium", sans-serif;
+  }
+  .point__text--span {
+    font: 700 25px/30px "HelveticaNeueCyr-Bold", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .point__text {
+    font: 400 18px/24px "HelveticaNeueCyr-Medium", sans-serif;
+  }
+  .point__text--span {
+    font: 700 36px/40px "HelveticaNeueCyr-Bold", sans-serif;
   }
 }
