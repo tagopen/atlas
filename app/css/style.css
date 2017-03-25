@@ -502,7 +502,8 @@ a:hover, a:focus {
   border: 0;
 }
 
-.button:hover {
+.button:hover, .button:focus {
+  color: #fff;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#1bb192), to(#2ad1c7));
   background-image: -webkit-linear-gradient(bottom, #1bb192 0%, #2ad1c7 100%);
   background-image: linear-gradient(to top, #1bb192 0%, #2ad1c7 100%);
