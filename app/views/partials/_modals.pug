@@ -1,0 +1,117 @@
+#nav__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__small
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal__head
+        p.modal__heading Введите ваш номер телефона, чтобы наш специалист вам перезвонил!
+        p.modal__text В рабочее время мы перезваниваем в течении 2-4 минут
+      form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
+        .row
+          .col-xs-12
+            form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
+              .row
+                .col-xs-12.col-sm-8.col-sm-offset-2.col-md-12.col-md-offset-0
+                  .row
+                    .form-group.col-xs-12
+                      input.form-control.form__input.form__phone.form__input--phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+                      i.fa.fa-phone(aria-hidden="true")
+                      p.help-block.text-danger
+                    .clearfix
+                      .success
+                .col-xs-12    
+                  .text-center
+                    button.btn.button.button--size(name='Заказать обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") ПЕРЕЗВОНИТЕ МНЕ
+                    p.modal__subtext 
+                      i.fa.fa-lock(aria-hidden="true")
+                      | Гарантируем полную конфиденциальность ваших данных
+#header__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__big
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal__head
+        p.modal__heading.modal__heading--big Приставка ATLAS BOX PRO откроет 17 новых возможностей вашему телевизору!
+        p.modal__text.modal__text--big Полный список функций мы перечислили в бесплатном PDF файле. Укажите свой email и телефон, чтобы мы могли отправить вам этот файл на почту
+      form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
+        .row
+          .col-xs-12.col-sm-5
+            .modal__icon
+              img.img-responsive(src='img/modalimg.png' alt='книга') 
+          .col-xs-12.col-sm-7
+            form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
+              .row
+                .col-xs-12.col-sm-10.col-sm-offset-1
+                  .row
+                    .form-group.col-xs-12
+                      input.form-control.form__input.form__name(aria-invalid='false', placeholder='Введите ваш email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='email')
+                      i.fa.fa-envelope(aria-hidden="true")
+                      p.help-block.text-danger
+                    .form-group.col-xs-12
+                      input.form-control.form__input.form__phone.form__input--phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+                      i.fa.fa-phone(aria-hidden="true")
+                      p.help-block.text-danger
+                    .clearfix
+                      .success
+                .col-xs-12    
+                  .text-center
+                    button.btn.button.button--size.modal__btn(name='Заказать обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить список 17 возможностей приставки
+                    p.modal__subtext 
+                      i.fa.fa-lock(aria-hidden="true")
+                      | Гарантируем полную конфиденциальность ваших данных 
+#opportunity__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__big
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal__head
+        p.modal__text.modal__text--big Просмотр телевидения осуществляется через приложение Torrent Stream Controller (TSC). Оно бесплатное и заранее установлено на приставку. 
+        p.modal__text.modal__text--big С помощью TSC вы получите доступ к 
+          b более чем 600 каналам, 150 из которых в HD качестве. 
+          | В этот список входят все самые необходимые каналы. Если вас интересует наличие конкретного телеканала - вы можете оставить заявку и менеджер проверит его наличие в приложении
+      form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
+        .row
+          .col-xs-12.col-sm-8.col-sm-offset-2
+            form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
+              .row
+                .col-xs-12.col-sm-8.col-sm-offset-2
+                  .row
+                    .form-group.col-xs-12
+                      input.form-control.form__input.form__phone.form__input--phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+                      i.fa.fa-phone(aria-hidden="true")
+                      p.help-block.text-danger
+                    .clearfix
+                      .success
+                .col-xs-12    
+                  .text-center
+                    button.btn.button.button--size.modal__btn(name='Заказать обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Хочу узнать, есть ли мои любимые каналы в приложении
+                    p.modal__subtext 
+                      i.fa.fa-lock(aria-hidden="true")
+                      | Гарантируем полную конфиденциальность ваших данных                                                     
+#console__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__small
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal__head
+        p.modal__heading Отлично! Эта приставка уже почти Ваша!
+        p.modal__text Оставьте ваш номер телефона, чтобы мы вам перезвонили и оформили заказ (это займет менее 5 минут)
+      form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
+        .row
+          .col-xs-12
+            form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
+              .row
+                .col-xs-12.col-sm-8.col-sm-offset-2.col-md-12.col-md-offset-0
+                  .row
+                    .form-group.col-xs-12
+                      input.form-control.form__input.form__phone.form__input--phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+                      i.fa.fa-phone(aria-hidden="true")
+                      p.help-block.text-danger
+                    .clearfix
+                      .success
+                .col-xs-12    
+                  .text-center
+                    button.btn.button.button--size(name='Заказать обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") ОФОРМИТЬ ЗАКАЗ
+                    p.modal__subtext 
+                      i.fa.fa-lock(aria-hidden="true")
+                      | Гарантируем полную конфиденциальность ваших данных                           

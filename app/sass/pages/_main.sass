@@ -46,7 +46,7 @@ a
     color: rgba(30,22,15,0.5)
     font: 400 18px/20px $font-helvetica-medium
     background-color: #fff
-    border: 0    
+    border: 1px solid #66afe9  
     &:focus
       color: rgba(30,22,15,1)
       & ~ .fa
@@ -59,6 +59,70 @@ a
       top: 23px      
       color: rgba(30,22,15,0.5)
       font-size: 18px
+.modal
+  &__small
+    width: 290px
+    margin: 30px auto
+  &__big
+    width: 100%
+    margin: 30px auto
+    padding-left: 15px
+    padding-right: 15px
+    background-color: transparent
+  &__content
+    position: relative
+    border-radius: 0
+    padding: 25px 15px 10px  
+  &__close
+    position: absolute
+    top: 10px
+    right: 10px
+    opacity: 1 
+    text-shadow: none
+    color: #383a47 
+    &:hover
+      color: rgb(74, 195, 184)
+      opacity: 1 
+  &__heading
+    font: 700 16px/24px $font-helvetica-bold
+    color: #000     
+    text-align: center
+    margin-bottom: 25px
+  &__text
+    font: 400 16px/24px $font-helvetica-medium
+    color: #000     
+    text-align: center
+    margin-bottom: 20px
+  &__btn
+    white-space: normal  
+  &__subtext
+    font: 400 12px/16px $font-helvetica-medium
+    margin-top: 20px
+    color: #383a47  
+    .fa
+      margin-right: 5px
+  &__icon
+    text-align: center
+    margin-bottom: 40px
+    img
+      display: inline-block    
++r(768)
+  .modal
+    &__small
+      width: 360px
+    &__big
+      width: 750px
+      margin: 40px auto 30px
+    &__heading
+      font: 700 18px/24px $font-helvetica-bold
+      &--big
+        padding-left: 75px
+        padding-right: 75px   
+    &__text
+      font: 400 18px/24px $font-helvetica-medium
+      &--big
+        padding-left: 70px
+        padding-right: 70px    
 +comment("home page style")
 +comment("nav style")
 .navbar
@@ -827,11 +891,248 @@ a
       color: #000
       display: inline-block
       font-family: 'FontAwesome'
-      margin-right: 5px
+      margin-right: 5px     
+  &__icon
+    text-align: center
+    margin-bottom: 15px
+    &--2
+      margin-top: 15px
+    img
+      display: inline-block     
 +r(768)
   .connect
+    &__heading
+      text-align: left
+      line-height: 70px
+      margin-bottom: 45px
     &__col
       float: right
     &__item      
       font: 400 22px/24px $font-helvetica-medium
       margin-bottom: 25px
+    &__icon
+      &--2
+        padding-top: 75px 
++r(992)         
+  .connect
+    &__icon
+      &--1
+        text-align: right
+      &--2
+        padding-top: 0
++comment("comment style")   
+.comment
+  padding: 50px 0 150px  
+  &__heading
+    margin-bottom: 30px   
+    text-align: left
+  &__item
+    padding: 15px  
+  &__content
+    position: relative
+    background-color: #383a47
+    box-shadow: 2.5px 4.3px 7px rgba(0, 0, 0, 0.13)
+    padding: 20px 10px 50px
+    margin-bottom: 142px
+    &:before
+      content: '\f10d'
+      display: inline-block
+      position: absolute
+      left: 0
+      top: -20px
+      color: #4ab8af
+      font-size: 30px
+      font-family: "FontAwesome"
+  &__text
+    font: 400 15px/20px $font-helvetica-light
+    text-align: center
+    color: #fff
+  &__author
+    position: absolute 
+    width: 164px
+    left: 50%
+    margin-left: -82px
+    bottom: -140px
+  &__name
+    position: absolute
+    bottom: 0
+    width: 100%
+    left: 0
+    text-align: center
+    background-color: rgba(74,195,184,0.9)
+    padding: 10px 0
+  &__subtext
+    font: 400 12px/16px $font-helvetica-medium
+    color: #fff  
+    margin-bottom: 5px
+  &__slider
+    .slick
+      &-arrow
+        width: 16px
+        height: 22px
+        top: 30%
+        &:before      
+          display: inline-block
+          font-family: 'FontAwesome'  
+          color: #2e303e
+          font-size: 22px
+        &:hover  
+          &:before
+            color: #111217
+      &-prev
+        &:before
+          content: '\f053' 
+      &-next
+        &:before
+          content: '\f054' 
++r(768)
+  .comment
+    &__content
+      margin-bottom: 160px
+      padding: 20px 20px 50px
+    &__text
+      font: 400 20px/30px $font-helvetica-light  
+    &__author
+      width: 200px
+      left: auto
+      right: 0
+      bottom: -160px
+      margin-right: 30px     
++r(992)
+  .comment
+    &__item
+      padding-right: 130px
+    &__author
+      left: auto
+      right: 0
+      margin-right: -130px            
++comment("bonus style") 
+.bonus
+  position: relative
+  padding: 45px 0 50px  
+  background-color: #f8f8f8
+  &:before
+    display: block
+    content: ''
+    position: absolute
+    height: 598px
+    width: 100%
+    top: 0
+    left: 0
+    background-image: linear-gradient(to top, #2a9680 0%, #2ad1c7 100%)
+  &__heading
+    margin-bottom: 45px  
+  &__info
+    font: 400 16px/24px $font-helvetica-medium
+    color: #000    
+    margin: 50px 0
+    text-align: center 
+  &__text
+    font: 400 16px/36px $font-helvetica-light
+    color: #fff  
+    text-align: center
+    margin-bottom: 25px
+    &--span
+      font: 700 16px/36px $font-helvetica-bold
+      text-transform: uppercase
+  &__image
+    text-align: center
+    img
+      display: inline-block    
+  &__content
+    padding-bottom: 50px    
+  &__btn
+    white-space: normal  
++r(768)
+  .bonus
+    &:before
+      height: 567px
+      width: 100%
+    &__heading
+      margin-bottom: 55px  
+    &__btn   
+      font: 700 14px/24px $font-helvetica-medium  
+    &__text
+      font: 400 24px/36px $font-helvetica-light 
+      &--span
+        font: 700 24px/36px $font-helvetica-bold 
++r(992)
+  .bonus
+    padding-bottom: 35px
+    &:before
+      height: 100%
+      width: 50%
+    &__info
+      margin: 20px 0 70px
+    &__content
+      padding-bottom: 0 
+    &__btn
+      margin-top: 35px   
++comment("map style")
+.map
+  position: relative
+  padding: 65px 0 0
+  height: 600px
+  &__iframe
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+  &__content
+    background: rgba(56,58,71,0.85) 
+    padding: 45px 0 20px
+  &__icon
+    position: relative
+    background-color: rgba(74,195,184,0.6) 
+    border-radius: 50%
+    text-align: center
+    height: 100px
+    width: 100px
+    margin: 0 auto 40px
+    .fa
+      font-size: 36px 
+      line-height: 96px 
+      color: #fff
+    &:before  
+      content: ''
+      position: absolute
+      left: -14px
+      top: -14px
+      display: block
+      height: 128px
+      width: 128px
+      border: 1px solid #fff
+      border-radius: 50%
+      background: transparent
+  &__text
+    font: 400 18px/36px $font-helvetica-light
+    text-align: center
+    color: #fff    
+    .fa
+      margin-right: 10px
++r(768)
+  .map    
+    padding-top: 103px  
+    &__text
+      font: 400 20px/36px $font-helvetica-light   
++r(992)
+  .map
+    &__content
+      padding: 45px 25px 20px      
++r(1200)    
+  .map
+    &__text
+      font: 400 22px/36px $font-helvetica-light 
++comment("footer style")   
+.footer
+  padding: 25px 0
+  background-color: #383a47
+  &__text
+    font: 400 12px/20px $font-helvetica-medium
+    color: #fff
+    text-align: center
++r(768)              
+  .footer
+    &__text
+      font: 400 16px/20px $font-helvetica-medium

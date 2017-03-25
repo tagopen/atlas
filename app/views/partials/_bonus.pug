@@ -1,0 +1,29 @@
+section.bonus
+  .container
+    .row
+      .col-xs-12
+        h2.heading.bonus__heading Год обслуживания в подарок и гарантия возврата!
+    .row
+      .col-xs-12.col-md-6
+        .bonus__content
+          p.bonus__text Дополнительно к приставке мы дарим вам
+            br  
+            span.bonus__text--span год технической поддержки в подарок! 
+            br
+            | А если вам не понравится товар, то вы можете вернуть его в течении 14 дней!
+          .bonus__image  
+            img.img-responsive(src='img/bonusic.png' alt='картинка')
+      .col-xs-12.col-md-6 
+        p.bonus__info Укажите свой номер и получите тех. поддержку на год в подарок!
+        form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
+          .row
+            .col-xs-12
+              .row
+                .form-group.col-xs-12.col-sm-8.col-sm-offset-2
+                  input.form-control.form__input.form__phone.form__input--phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+                  i.fa.fa-phone(aria-hidden="true")
+                  p.help-block.text-danger
+                .success
+                .col-xs-12.col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0  
+                  .text-center
+                    button.btn.button.button--size.bonus__btn(name='Заказать обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Заказать приставку и бесплатное обслуживание   

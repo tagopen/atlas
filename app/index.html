@@ -69,7 +69,7 @@
               <div class="phone"><a class="phone__link" href="tel:+380673843732"> <i class="fa fa-phone" aria-hidden="true"></i>+38 (067) 384 37 32   </a></div>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-3 navbar__col">
-              <button class="btn button navbar__button" data-toggle="modal">заказать звонок    </button>
+              <button class="btn button navbar__button" data-toggle="modal" data-target="#nav__modal">заказать звонок    </button>
             </div>
           </div>
         </div>
@@ -91,7 +91,7 @@
           </div>
           <div class="row">     
             <div class="col-xs-12 col-sm-8 col-md-5">   
-              <button class="btn button button--size" data-toggle="modal">узнайте все возможности приставки  </button>
+              <button class="btn button button--size" data-toggle="modal" data-target="#header__modal">узнайте все возможности приставки  </button>
             </div>
           </div>
         </div>
@@ -196,7 +196,7 @@
               </div>
             </div>
             <div class="col-xs-12 col-sm-7 col-md-5">      
-              <button class="btn button opportunity__button button--size" data-toggle="modal">Посмотреть список телеканалов      </button>
+              <button class="btn button opportunity__button button--size" data-toggle="modal" data-target="#opportunity__modal">Посмотреть список телеканалов      </button>
             </div>
           </div>
           <div class="row">
@@ -428,7 +428,7 @@
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-10"> 
-                  <button class="btn button button--size table__btn" data-toggle="modal">ДА! Я ХОЧУ ПРИСТАВКУ!</button>
+                  <button class="btn button button--size table__btn" data-toggle="modal" data-target="#console__modal">ДА! Я ХОЧУ ПРИСТАВКУ!</button>
                 </div>
                 <div class="col-xs-12 col-sm-10">
                   <div class="table__way way">
@@ -589,14 +589,14 @@
         <div class="container connect__container">
           <div class="row">
             <div class="col-xs-12 col-sm-2 col-md-3">
-              <div class="connect__icon"><i class="ic--connect"></i></div>
+              <div class="connect__icon connect__icon--1"><img class="img-responsive" src="img/icons/connect.png" alt="картинка"></div>
             </div>
             <div class="col-xs-12 col-sm-10 col-md-9">
               <h2 class="heading connect__heading">Легкость подключения приставки</h2>
             </div>
           </div>
           <div class="row">
-            <div class="col-xs-12 col-sm-8 connect__col">
+            <div class="col-xs-12 col-sm-7 connect__col">
               <ul class="connect__list">  
                 <li class="connect__item">Подключите к приставке кабель с блоком питания, и вставьте штекер в розетку</li>
                 <li class="connect__item">С помощью HDMI кабеля соедините приставку и ваш телевизор </li>
@@ -604,14 +604,291 @@
                 <li class="connect__item">Подключитесь к вашей сети интернет (wifi или через кабель) и пользуйтесь приставкой</li>
               </ul>
             </div>
-            <div class="col-xs-12 col-sm-4">   
-              <div class="connect__icon"><i class="ic--connect2"></i></div>
+            <div class="col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-0">   
+              <div class="connect__icon connect__icon--2"><img class="img-responsive" src="img/icons/connect2.png" alt="картинка"></div>
             </div>
           </div>
         </div>
       </section>
+      <section class="comment">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+              <h2 class="heading comment__heading">Отзывы клиентов</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+              <div class="comment__slider">
+                <div class="comment__item">
+                  <div class="comment__content">
+                    <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus consequatur consectetur est corporis laboriosam praesentium molestias sunt, vitae architecto aspernatur nulla culpa, officiis perferendis cumque, id laborum. Magni hic, quo.</p>
+                    <div class="comment__author"><img class="img-responsive" src="img/comment1.jpg" alt="комментатор">
+                      <div class="comment__name">
+                        <p class="comment__subtext">Иван Иванович</p>
+                        <p class="comment__subtext">Менеджер</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment__item">
+                  <div class="comment__content">
+                    <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus consequatur consectetur est corporis laboriosam praesentium molestias sunt, vitae architecto aspernatur nulla culpa, officiis perferendis cumque, id laborum. Magni hic, quo.</p>
+                    <div class="comment__author"><img class="img-responsive" src="img/comment1.jpg" alt="комментатор">
+                      <div class="comment__name">
+                        <p class="comment__subtext">Иван Иванович</p>
+                        <p class="comment__subtext">Менеджер</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment__item"> 
+                  <div class="comment__content">
+                    <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus consequatur consectetur est corporis laboriosam praesentium molestias sunt, vitae architecto aspernatur nulla culpa, officiis perferendis cumque, id laborum. Magni hic, quo.</p>
+                    <div class="comment__author"><img class="img-responsive" src="img/comment1.jpg" alt="комментатор">
+                      <div class="comment__name">
+                        <p class="comment__subtext">Иван Иванович</p>
+                        <p class="comment__subtext">Менеджер</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bonus">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <h2 class="heading bonus__heading">Год обслуживания в подарок и гарантия возврата!</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+              <div class="bonus__content">
+                <p class="bonus__text">Дополнительно к приставке мы дарим вам<br><span class="bonus__text--span">год технической поддержки в подарок! </span><br>А если вам не понравится товар, то вы можете вернуть его в течении 14 дней!</p>
+                <div class="bonus__image"> <img class="img-responsive" src="img/bonusic.png" alt="картинка"></div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6"> 
+              <p class="bonus__info">Укажите свой номер и получите тех. поддержку на год в подарок!</p>
+              <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="row">
+                      <div class="form-group col-xs-12 col-sm-8 col-sm-offset-2">
+                        <input class="form-control form__input form__phone form__input--phone" aria-invalid="false" placeholder="+38(___)___-__-__" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel"><i class="fa fa-phone" aria-hidden="true"></i>
+                        <p class="help-block text-danger"></p>
+                      </div>
+                      <div class="success"></div>
+                      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0"> 
+                        <div class="text-center">
+                          <button class="btn button button--size bonus__btn" name="Заказать обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Заказать приставку и бесплатное обслуживание   </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="map">
+        <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5078.358658368667!2d30.504408565326113!3d50.47500514893289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce0d881943ef%3A0x48cf908aa46aea22!2z0LLRg9C70LjRhtGPINCe0LvQtdC90ZbQstGB0YzQutCwLCAzNNCQLCDQmtC40ZfQsg!5e0!3m2!1sru!2sua!4v1490447832454" frameborder="0" style="border:0;" allowfullscreen></iframe>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-0">
+              <div class="map__content">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-5 col-md-4">
+                    <div class="map__icon"><i class="fa fa-home" aria-hidden="true"></i></div>
+                  </div>
+                  <div class="col-xs-12 col-sm-7 col-md-8"> 
+                    <div class="map__info">
+                      <p class="map__text"><i class="fa fa-clock-o" aria-hidden="true"></i>Пн. - Пт : 10:00 - 22:00 <br>Сб: 10:00 - 17:00</p>
+                    </div>
+                    <div class="map__info"> 
+                      <p class="map__text"> <i class="fa fa-map-marker" aria-hidden="true"></i>Киев, Еленовская 34 - А</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="footer"></div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="footer__text">© 2013-2017 Smart TV box. Все права защищены</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal fade" id="nav__modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal__small">
+        <div class="modal-content modal__content">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+          <div class="modal__head">
+            <p class="modal__heading">Введите ваш номер телефона, чтобы наш специалист вам перезвонил!</p>
+            <p class="modal__text">В рабочее время мы перезваниваем в течении 2-4 минут</p>
+          </div>
+          <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
+            <div class="row">
+              <div class="col-xs-12">
+                <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-12 col-md-offset-0">
+                      <div class="row">
+                        <div class="form-group col-xs-12">
+                          <input class="form-control form__input form__phone form__input--phone" aria-invalid="false" placeholder="+38(___)___-__-__" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel"><i class="fa fa-phone" aria-hidden="true"></i>
+                          <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="clearfix">
+                          <div class="success"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12">   
+                      <div class="text-center">
+                        <button class="btn button button--size" name="Заказать обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">ПЕРЕЗВОНИТЕ МНЕ</button>
+                        <p class="modal__subtext"> <i class="fa fa-lock" aria-hidden="true"></i>Гарантируем полную конфиденциальность ваших данных</p>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="header__modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal__big">
+        <div class="modal-content modal__content">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+          <div class="modal__head">
+            <p class="modal__heading modal__heading--big">Приставка ATLAS BOX PRO откроет 17 новых возможностей вашему телевизору!</p>
+            <p class="modal__text modal__text--big">Полный список функций мы перечислили в бесплатном PDF файле. Укажите свой email и телефон, чтобы мы могли отправить вам этот файл на почту</p>
+          </div>
+          <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
+            <div class="row">
+              <div class="col-xs-12 col-sm-5">
+                <div class="modal__icon"><img class="img-responsive" src="img/modalimg.png" alt="книга"></div>
+              </div>
+              <div class="col-xs-12 col-sm-7">
+                <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                      <div class="row">
+                        <div class="form-group col-xs-12">
+                          <input class="form-control form__input form__name" aria-invalid="false" placeholder="Введите ваш email" required data-validation-required-message="Заполните поле корректно." name="email" type="email"><i class="fa fa-envelope" aria-hidden="true"></i>
+                          <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group col-xs-12">
+                          <input class="form-control form__input form__phone form__input--phone" aria-invalid="false" placeholder="+38(___)___-__-__" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel"><i class="fa fa-phone" aria-hidden="true"></i>
+                          <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="clearfix">
+                          <div class="success"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12">   
+                      <div class="text-center">
+                        <button class="btn button button--size modal__btn" name="Заказать обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить список 17 возможностей приставки</button>
+                        <p class="modal__subtext"> <i class="fa fa-lock" aria-hidden="true"></i>Гарантируем полную конфиденциальность ваших данных </p>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="opportunity__modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal__big">
+        <div class="modal-content modal__content">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+          <div class="modal__head">
+            <p class="modal__text modal__text--big">Просмотр телевидения осуществляется через приложение Torrent Stream Controller (TSC). Оно бесплатное и заранее установлено на приставку. </p>
+            <p class="modal__text modal__text--big">С помощью TSC вы получите доступ к <b>более чем 600 каналам, 150 из которых в HD качестве. </b>В этот список входят все самые необходимые каналы. Если вас интересует наличие конкретного телеканала - вы можете оставить заявку и менеджер проверит его наличие в приложении</p>
+          </div>
+          <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
+            <div class="row">
+              <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                      <div class="row">
+                        <div class="form-group col-xs-12">
+                          <input class="form-control form__input form__phone form__input--phone" aria-invalid="false" placeholder="+38(___)___-__-__" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel"><i class="fa fa-phone" aria-hidden="true"></i>
+                          <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="clearfix">
+                          <div class="success"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12">   
+                      <div class="text-center">
+                        <button class="btn button button--size modal__btn" name="Заказать обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Хочу узнать, есть ли мои любимые каналы в приложении</button>
+                        <p class="modal__subtext"> <i class="fa fa-lock" aria-hidden="true"></i>Гарантируем полную конфиденциальность ваших данных                                                     </p>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="console__modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal__small">
+        <div class="modal-content modal__content">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+          <div class="modal__head">
+            <p class="modal__heading">Отлично! Эта приставка уже почти Ваша!</p>
+            <p class="modal__text">Оставьте ваш номер телефона, чтобы мы вам перезвонили и оформили заказ (это займет менее 5 минут)</p>
+          </div>
+          <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
+            <div class="row">
+              <div class="col-xs-12">
+                <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-12 col-md-offset-0">
+                      <div class="row">
+                        <div class="form-group col-xs-12">
+                          <input class="form-control form__input form__phone form__input--phone" aria-invalid="false" placeholder="+38(___)___-__-__" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel"><i class="fa fa-phone" aria-hidden="true"></i>
+                          <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="clearfix">
+                          <div class="success"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12">   
+                      <div class="text-center">
+                        <button class="btn button button--size" name="Заказать обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">ОФОРМИТЬ ЗАКАЗ</button>
+                        <p class="modal__subtext"> <i class="fa fa-lock" aria-hidden="true"></i>Гарантируем полную конфиденциальность ваших данных                           </p>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <div id="loading">
       <div id="loading-center">
         <div id="loading-center-absolute">
