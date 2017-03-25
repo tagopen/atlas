@@ -579,6 +579,13 @@ a:hover, a:focus {
   margin: 30px auto;
 }
 
+.modal__middle {
+  margin: 0;
+  padding: 85px 25px;
+  background: url(../img/middlebg.png) no-repeat;
+  background-size: cover;
+}
+
 .modal__big {
   width: 100%;
   margin: 30px auto;
@@ -592,6 +599,16 @@ a:hover, a:focus {
   -webkit-border-radius: 0;
           border-radius: 0;
   padding: 25px 15px 10px;
+}
+
+.modal__content--middle {
+  background-color: #f8f8f8;
+  border: 3px dashed #383a47;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  -webkit-box-shadow: 1.5px 2.6px 7px rgba(0, 0, 0, 0.21);
+          box-shadow: 1.5px 2.6px 7px rgba(0, 0, 0, 0.21);
+  padding: 70px 10px 30px;
 }
 
 .modal__close {
@@ -608,11 +625,26 @@ a:hover, a:focus {
   opacity: 1;
 }
 
+.modal__close--middle {
+  top: -65px;
+  right: -15px;
+  color: #fff;
+}
+
 .modal__heading {
   font: 700 16px/24px "HelveticaNeueCyr-Bold", sans-serif;
   color: #000;
   text-align: center;
   margin-bottom: 25px;
+}
+
+.modal__heading--span {
+  color: #20bba3;
+}
+
+.modal__heading--middle {
+  font: 700 18px/24px "HelveticaNeueCyr-Bold", sans-serif;
+  color: #070f2a;
 }
 
 .modal__text {
@@ -645,9 +677,53 @@ a:hover, a:focus {
   display: inline-block;
 }
 
+.modal__ttx {
+  padding: 0 10px;
+}
+
+.modal__img {
+  position: absolute;
+}
+
+.modal__img--1 {
+  display: inline-block;
+  background: url(../img/middleic.png) no-repeat;
+  background-size: contain;
+  height: 72px;
+  width: 110px;
+  top: -35px;
+  right: -20px;
+}
+
+.modal__img--2 {
+  display: inline-block;
+  background: url(../img/middlearrow.png) no-repeat;
+  background-size: contain;
+  height: 49px;
+  width: 146px;
+  top: 20px;
+  left: 50%;
+  margin-left: -73px;
+}
+
+.modal__img--3 {
+  display: inline-block;
+  background: url(../img/middletv.png) no-repeat;
+  background-size: contain;
+  height: 110px;
+  width: 200px;
+  bottom: -80px;
+  left: -10px;
+}
+
 @media only screen and (min-width: 768px) {
   .modal__small {
     width: 360px;
+  }
+  .modal__middle {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 150px;
   }
   .modal__big {
     width: 750px;
@@ -660,12 +736,40 @@ a:hover, a:focus {
     padding-left: 75px;
     padding-right: 75px;
   }
+  .modal__heading--middle {
+    font: 700 26px/30px "HelveticaNeueCyr-Bold", sans-serif;
+    margin-bottom: 60px;
+  }
   .modal__text {
     font: 400 18px/24px "HelveticaNeueCyr-Medium", sans-serif;
   }
   .modal__text--big {
     padding-left: 70px;
     padding-right: 70px;
+  }
+  .modal__ttx {
+    padding: 0;
+  }
+  .modal__img--1 {
+    width: 219px;
+    height: 145px;
+    top: -50px;
+  }
+  .modal__img--2 {
+    top: 100px;
+    left: 75%;
+  }
+  .modal__img--3 {
+    width: 356px;
+    height: 188px;
+    bottom: -150px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .modal__content--middle {
+    width: 750px;
+    margin: 0 auto;
   }
 }
 
@@ -1244,6 +1348,10 @@ a:hover, a:focus {
   color: #000;
 }
 
+.console-slider-preview {
+  margin-bottom: 40px;
+}
+
 .console-slider-preview__item {
   text-align: center;
   padding: 5px 15px;
@@ -1293,6 +1401,12 @@ a:hover, a:focus {
   right: -15px;
   bottom: -15px;
   top: auto;
+}
+
+@media only screen and (min-width: 992px) {
+  .console-slider-preview {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1364,6 +1478,7 @@ a:hover, a:focus {
   font: 400 16px/20px "HelveticaNeueCyr-Medium", sans-serif;
   color: #5f5f5f;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .table__link:hover, .table__link:focus {

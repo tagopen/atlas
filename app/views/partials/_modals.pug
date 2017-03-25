@@ -114,4 +114,76 @@
                     button.btn.button.button--size(name='Заказать обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") ОФОРМИТЬ ЗАКАЗ
                     p.modal__subtext 
                       i.fa.fa-lock(aria-hidden="true")
-                      | Гарантируем полную конфиденциальность ваших данных                           
+                      | Гарантируем полную конфиденциальность ваших данных 
+#characteristic__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__big
+    .modal-content.modal__content
+      button.close.modal__close(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal__head
+        p.modal__heading Приставка  
+          span.modal__heading--span ATLAS BOX PRO
+      .modal__ttx
+        .row   
+          .col-xs-11.col-sm-10.col-sm-offset-1
+            .characteristic__table.table
+              .row.table__row.table__row--1
+                .col-xs-12.col-sm-6
+                  p.table__text Операционная система: 
+                .col-xs-12.col-sm-6
+                  p.table__text Android 6.0 Marshmallow
+              .row.table__row
+                .col-xs-12.col-sm-6
+                  p.table__text Тип корпуса: 
+                .col-xs-12.col-sm-6
+                  p.table__text матовый, акриловая панель
+              .row.table__row
+                .col-xs-12.col-sm-6
+                  p.table__text Антенна Wi-Fi:
+                .col-xs-12.col-sm-6
+                  p.table__text внутренняя
+              .row.table__row
+                .col-xs-12.col-sm-6
+                  p.table__text Wi-Fi:
+                .col-xs-12.col-sm-6
+                  p.table__text 2.4Гц 802.11 b/g/n/
+              .row.table__row
+                .col-xs-12.col-sm-6
+                  p.table__text LAN: 
+                .col-xs-12.col-sm-6
+                  p.table__text 10/100M Base-T
+              .row.table__row
+                .col-xs-12.col-sm-6
+                  p.table__text Bluetooth:
+                .col-xs-12.col-sm-6
+                  p.table__text 4.0    
+#sibassa__modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal__middle
+    .modal-content.modal__content.modal__content--middle
+      .modal__img.modal__img--1
+      .modal__img.modal__img--2
+      .modal__img.modal__img--3
+      button.close.modal__close.modal__close--middle(type='button', data-dismiss='modal', aria-hidden='true')
+        i.fa.fa-times(aria-hidden='true')
+      .modal__head
+        p.modal__heading.modal__heading--middle Бесплатный тест-драйв приставки!
+        p.modal__text Оставьте заявку прямо сейчас и уже завтра к вам приедет наш мастер, чтобы продемонстрировать работу приставки на вашем телевизоре! Вы лично увидите как она работает и протестируете все функции. Укажите свой номер телефона, чтобы мы вам позвонили и договорились о проведении демонстрации!
+      form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
+        .row
+          .col-xs-12.col-sm-8.col-sm-offset-2
+            form.contactForm.modal__form(method='post', action='./mail/mail.php', novalidate)
+              .row
+                .col-xs-12.col-sm-8.col-sm-offset-2
+                  .row
+                    .form-group.col-xs-12
+                      input.form-control.form__input.form__phone.form__input--phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+                      i.fa.fa-phone(aria-hidden="true")
+                      p.help-block.text-danger
+                    .clearfix
+                      .success
+                .col-xs-12    
+                  .text-center
+                    button.btn.button.button--size.modal__btn(name='Заказать обратный звонок', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Получить бесплатный тест-драйв приставки
+                    p.modal__subtext 
+                      i.fa.fa-lock(aria-hidden="true")
+                      | Гарантируем полную конфиденциальность ваших данных                                                                                       

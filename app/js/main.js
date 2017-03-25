@@ -61,7 +61,8 @@ $('.console-slider').slick({
   slidesToScroll: 1,
   arrows: false,
   dots: false,
-  asNavFor: '.console-slider-preview'
+  asNavFor: '.console-slider-preview',
+  infinite: true
 });
 $('.console-slider-preview').slick({
   slidesToShow: 3,
@@ -85,7 +86,8 @@ $('.console-slider-preview').slick({
       breakpoint: 0,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        infinite: true
       }
     }
   ]
@@ -139,4 +141,19 @@ $(document).ready(function(){
   $(".video-preview__close").click(function() {
     $(".video-preview").fadeOut();
   });
+});
+
+$(function($) {
+  var currentMousePos = { x: -1, y: -1 },
+  prevMousePos = {x: -1, y: -1};
+  $(document).on('mousemove, mouseout', function(event) {
+    currentMousePos.x = event.pageX;
+    currentMousePos.y = event.pageY;
+       // ELSEWHERE, your code that needs to know the mouse position without an event
+       if ((currentMousePos.y < prevMousePos.y) && (currentMousePos.y < 21)) {
+        $('#sibassa__modal').modal("show");
+      }
+      prevMousePos.x = currentMousePos.x;
+      prevMousePos.y = currentMousePos.y;
+    });
 });

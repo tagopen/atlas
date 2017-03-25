@@ -65,6 +65,11 @@ a
   &__small
     width: 290px
     margin: 30px auto
+  &__middle
+    margin: 0
+    padding: 85px 25px
+    background: url(../img/middlebg.png) no-repeat
+    background-size: cover  
   &__big
     width: 100%
     margin: 30px auto
@@ -75,6 +80,12 @@ a
     position: relative
     border-radius: 0
     padding: 25px 15px 10px  
+    &--middle
+      background-color: #f8f8f8
+      border: 3px dashed #383a47
+      border-radius: 20px
+      box-shadow: 1.5px 2.6px 7px rgba(0, 0, 0, 0.21)
+      padding: 70px 10px 30px
   &__close
     position: absolute
     top: 10px
@@ -85,11 +96,20 @@ a
     &:hover
       color: rgb(74, 195, 184)
       opacity: 1 
+    &--middle
+      top: -65px
+      right: -15px
+      color: #fff  
   &__heading
     font: 700 16px/24px $font-helvetica-bold
     color: #000     
     text-align: center
     margin-bottom: 25px
+    &--span
+      color: #20bba3
+    &--middle  
+      font: 700 18px/24px $font-helvetica-bold
+      color: #070f2a
   &__text
     font: 400 16px/24px $font-helvetica-medium
     color: #000     
@@ -107,11 +127,44 @@ a
     text-align: center
     margin-bottom: 40px
     img
-      display: inline-block    
+      display: inline-block   
+  &__ttx
+    padding: 0 10px     
+  &__img 
+    position: absolute
+    &--1
+      display: inline-block
+      background: url(../img/middleic.png) no-repeat
+      background-size: contain
+      height: 72px
+      width: 110px
+      top: -35px
+      right: -20px
+    &--2
+      display: inline-block
+      background: url(../img/middlearrow.png) no-repeat
+      background-size: contain
+      height: 49px
+      width: 146px
+      top: 20px
+      left: 50%
+      margin-left: -73px
+    &--3
+      display: inline-block
+      background: url(../img/middletv.png) no-repeat
+      background-size: contain
+      height: 110px
+      width: 200px 
+      bottom: -80px
+      left: -10px  
 +r(768)
   .modal
     &__small
       width: 360px
+    &__middle
+      width: 100% 
+      margin: 0 auto
+      padding-bottom: 150px
     &__big
       width: 750px
       margin: 40px auto 30px
@@ -119,12 +172,35 @@ a
       font: 700 18px/24px $font-helvetica-bold
       &--big
         padding-left: 75px
-        padding-right: 75px   
+        padding-right: 75px 
+      &--middle    
+        font: 700 26px/30px $font-helvetica-bold
+        margin-bottom: 60px
     &__text
       font: 400 18px/24px $font-helvetica-medium
       &--big
         padding-left: 70px
-        padding-right: 70px    
+        padding-right: 70px 
+    &__ttx
+      padding: 0   
+    &__img
+      &--1
+        width: 219px
+        height: 145px
+        top: -50px  
+      &--2
+        top: 100px
+        left: 75% 
+      &--3
+        width: 356px
+        height: 188px 
+        bottom: -150px  
++r(992)        
+  .modal
+    &__content
+      &--middle
+        width: 750px 
+        margin: 0 auto
 +comment("home page style")
 +comment("nav style")
 .navbar
@@ -495,6 +571,7 @@ a
       cursor: pointer
       color: #000
     &-preview
+      margin-bottom: 40px
       &__item
         text-align: center
         padding: 5px 15px
@@ -531,6 +608,11 @@ a
     right: -15px
     bottom: -15px 
     top: auto 
++r(992)
+  .console
+    &-slider
+      &-preview
+        margin-bottom: 0    
 +r(1200)  
   .console
     &__col
@@ -581,6 +663,7 @@ a
     font: 400 16px/20px $font-helvetica-medium
     color: #5f5f5f
     text-decoration: underline
+    cursor: pointer
     &:hover,
     &:focus
       color: #20bba3

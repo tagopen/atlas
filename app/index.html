@@ -90,7 +90,7 @@
             </div>
           </div>
           <div class="row">     
-            <div class="col-xs-12 col-sm-8 col-md-5">   
+            <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">   
               <button class="btn button button--size" data-toggle="modal" data-target="#header__modal">узнайте все возможности приставки  </button>
             </div>
           </div>
@@ -424,7 +424,7 @@
                           <p class="table__text">4.0                    </p>
                         </div>
                       </div>
-                    </div><a class="table__link" href="#">Полный список характеристик</a>
+                    </div><a class="table__link" data-toggle="modal" data-target="#characteristic__modal">Полный список характеристик</a>
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-10"> 
@@ -885,7 +885,114 @@
                     <div class="col-xs-12">   
                       <div class="text-center">
                         <button class="btn button button--size" name="Заказать обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">ОФОРМИТЬ ЗАКАЗ</button>
-                        <p class="modal__subtext"> <i class="fa fa-lock" aria-hidden="true"></i>Гарантируем полную конфиденциальность ваших данных                           </p>
+                        <p class="modal__subtext"> <i class="fa fa-lock" aria-hidden="true"></i>Гарантируем полную конфиденциальность ваших данных </p>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="characteristic__modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal__big">
+        <div class="modal-content modal__content">
+          <button class="close modal__close" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+          <div class="modal__head">
+            <p class="modal__heading">Приставка  <span class="modal__heading--span">ATLAS BOX PRO</span></p>
+          </div>
+          <div class="modal__ttx">
+            <div class="row">  
+              <div class="col-xs-11 col-sm-10 col-sm-offset-1">
+                <div class="characteristic__table table">
+                  <div class="row table__row table__row--1">
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="table__text">Операционная система: </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="table__text">Android 6.0 Marshmallow</p>
+                    </div>
+                  </div>
+                  <div class="row table__row">
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="table__text">Тип корпуса: </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="table__text">матовый, акриловая панель</p>
+                    </div>
+                  </div>
+                  <div class="row table__row">
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="table__text">Антенна Wi-Fi:</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="table__text">внутренняя</p>
+                    </div>
+                  </div>
+                  <div class="row table__row">
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="table__text">Wi-Fi:</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="table__text">2.4Гц 802.11 b/g/n/</p>
+                    </div>
+                  </div>
+                  <div class="row table__row">
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="table__text">LAN: </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="table__text">10/100M Base-T</p>
+                    </div>
+                  </div>
+                  <div class="row table__row">
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="table__text">Bluetooth:</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <p class="table__text">4.0    </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="sibassa__modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal__middle">
+        <div class="modal-content modal__content modal__content--middle">
+          <div class="modal__img modal__img--1"></div>
+          <div class="modal__img modal__img--2"></div>
+          <div class="modal__img modal__img--3"></div>
+          <button class="close modal__close modal__close--middle" type="button" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+          <div class="modal__head">
+            <p class="modal__heading modal__heading--middle">Бесплатный тест-драйв приставки!</p>
+            <p class="modal__text">Оставьте заявку прямо сейчас и уже завтра к вам приедет наш мастер, чтобы продемонстрировать работу приставки на вашем телевизоре! Вы лично увидите как она работает и протестируете все функции. Укажите свой номер телефона, чтобы мы вам позвонили и договорились о проведении демонстрации!</p>
+          </div>
+          <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
+            <div class="row">
+              <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                <form class="contactForm modal__form" method="post" action="./mail/mail.php" novalidate>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                      <div class="row">
+                        <div class="form-group col-xs-12">
+                          <input class="form-control form__input form__phone form__input--phone" aria-invalid="false" placeholder="+38(___)___-__-__" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel"><i class="fa fa-phone" aria-hidden="true"></i>
+                          <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="clearfix">
+                          <div class="success"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12">   
+                      <div class="text-center">
+                        <button class="btn button button--size modal__btn" name="Заказать обратный звонок" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Получить бесплатный тест-драйв приставки</button>
+                        <p class="modal__subtext"> <i class="fa fa-lock" aria-hidden="true"></i>Гарантируем полную конфиденциальность ваших данных                                                                                       </p>
                       </div>
                     </div>
                   </div>
