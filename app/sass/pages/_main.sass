@@ -1261,3 +1261,60 @@ a
   .footer
     &__text
       font: 400 16px/20px $font-helvetica-medium
++comment("sucess page style") 
+.success
+  background: url(../img/tybg.png) no-repeat
+  background-size: cover
+  &__navbar
+    margin: 0  
+    background: rgba(255,255,255,0.5)
+    padding-bottom: 25px
+  &__content
+    position: relative
+    padding: 100px 0 40px 
+    overflow: hidden
+    &:before
+      position: absolute
+      top: 20px
+      left: 50%
+      margin-left: -270px
+      display: block
+      content: ''
+      height: 540px
+      width: 540px
+      background-color: rgba(18,132,122,0.75) 
+      box-shadow: 1.5px 2.6px 7px rgba(0, 0, 0, 0.25)
+      border-radius: 50%
+  &__text
+    font: 700 16px/20px $font-helvetica-bold
+    color: #fff      
+    text-align: center
+    margin-bottom: 30px
+  &__video
+    height: 164px
+  &__iframe
+    height: 100%
+    width: 100%  
++r(420)    
+  .success
+    &__content
+      &:before
+        height: 700px
+        width: 700px
+        margin-left: -350px
+    &__text
+      padding: 0 15px  
++r(600)    
+  .success
+    &__content
+      &:before
+        top: 0
+        height: 840px
+        width: 840px
+        margin-left: -420px      
++r(768)   
+  .success
+    &__text 
+      font: 700 22px/28px $font-helvetica-bold  
+    &__video
+      height: 270px   
