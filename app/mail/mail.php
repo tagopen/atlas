@@ -26,14 +26,14 @@
 
   $body = '';
   
-/*  if (!empty($_POST["form"])) {
+  if (!empty($_POST["form"])) {
     if(is_array($_POST["form"])) {
       foreach ($_POST["form"] as $key => $value) {
         $post['user_form'] = strip_tags($key);
         $body .= 'Заявка с формы: ' . $post['user_form'] . chr(10) . chr(13);
       }
+    }
   }
-}*/
 
   if (!empty($_POST["email"])) {
     $post['user_email'] = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
