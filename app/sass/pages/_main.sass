@@ -25,6 +25,21 @@ a
     color: #fff  
   &--size
     width: 100%  
+    position: relative
+  &--ripple-in
+    position: relative  
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: #fff
+      top: 0
+      left: 0
+      border-radius: 25px
+      transform: scale(0)
+      opacity: .7
+      animation: ripple-in 3s infinite
 +r(768)   
   .button 
     font: 700 18px/20px $font-helvetica-bold
@@ -201,10 +216,44 @@ a
       &--middle
         width: 750px 
         margin: 0 auto
+@keyframes ripple-in
+  0%
+    transform: scale(0)
+
+  2%
+    transform: scale(0)
+
+  3%
+    transform: scale(0)
+
+  20%
+    transform: scale(1)
+    opacity: 0.3
+
+  21%
+    transform: scale(1)
+    opacity: 0.3
+
+  22%
+    transform: scale(1)
+    opacity: 0.3
+
+  98%
+    transform: scale(1)
+    opacity: 0
+
+  99%
+    transform: scale(1)
+    opacity: 0
+
+  100%
+    transform: scale(1)
+    opacity: 0        
 +comment("home page style")
 +comment("nav style")
 .navbar
   padding-top: 30px
+  border-radius: 0
   &__button
     font: 700 14px/16px $font-helvetica-bold
 .logo
@@ -229,6 +278,7 @@ a
     margin-right: 10px    
 +r(768)
   .navbar
+    margin-bottom: 0
     &__col
       float: right
   .logo
@@ -248,6 +298,9 @@ a
     text-align: left
     &__link
       font: 400 20px/21px $font-helvetica-medium
++r(992)      
+  .phone
+    text-align: center
 +comment("header style")      
 .header
   padding: 100px 0 30px
@@ -271,40 +324,41 @@ a
     margin-left: -25px     
 +r(768)
   .header
-    padding: 65px 0 50px 
+    padding: 35px 0 45px 
     background: url(../img/headerbg.png) no-repeat
     background-size: cover
     background-position: 57% top
     &__col
       text-align: left
     &__text
-      font: 400 20px/48px $font-helvetica-medium
-      margin-bottom: 60px
+      font: 400 20px/40px $font-helvetica-medium
+      margin-bottom: 40px
       &--span
-        font: 700 20px/48px $font-helvetica-bold
+        font: 700 20px/40px $font-helvetica-bold
     &__image
       top: 130px
       left: 50px    
 +r(992)  
   .header
-    padding: 100px 0 30px 
+    padding: 60px 0 30px 
     background-position: 50% top
     &__text
       font: 400 30px/48px $font-helvetica-medium
       &--span
         font: 700 30px/48px $font-helvetica-bold  
     &__image
-      top: 180px
-      left: 0    
+      top: 280px
+      left: 0  
+      margin-top: -100px  
 +comment("work style") 
 .work
   position: relative
   padding: 50px 0 
   &__heading
-    margin-bottom: 120px
+    margin-bottom: 80px
   &__subheading
     position: absolute
-    top: 120px
+    top: 90px
     width: 100%
     margin: 0
     text-align: center
@@ -336,7 +390,7 @@ a
     &__text
       display: inline-block
       vertical-align: middle
-      font: 700 12px/14px $font-helvetica-bold 
+      font: 700 14px/16px $font-helvetica-bold 
       color: #000    
       margin-bottom: 0  
       &--span
@@ -368,7 +422,7 @@ a
       &__img
         max-width: 80px
       &__content
-        line-height: 74px      
+        line-height: 74px 
 +r(992)  
   .work
     &__col
@@ -395,11 +449,14 @@ a
         float: right   
     &-box
       padding: 30px 0 20px
-      margin-bottom: 150px      
+      margin-bottom: 130px 
 +r(1200)   
   .work
     &__subheading
-      font: 700 180px/190px $font-helvetica-bold         
+      font: 700 180px/190px $font-helvetica-bold  
+    &-box  
+      &__text
+        font: 700 18px/18px $font-helvetica-bold    
 +comment("opportunity style")    
 .opportunity
   &__heading
@@ -485,14 +542,9 @@ a
     margin-top: -52px
 +comment("problem style")     
 .problem
-  padding: 25px 0 65px
+  padding: 60px 0 60px
   background: url(../img/problembg.png) no-repeat
   background-size: cover
-  &__img
-    text-align: left
-    margin-bottom: 30px
-    img
-      display: inline-block
   &__content
     background-color: rgba(255,255,255,0.77)
     box-shadow: 2.5px 4.3px 7px rgba(0, 0, 0, 0.26)
@@ -517,9 +569,7 @@ a
     img
       display: inline-block  
 +r(768)  
-  .problem
-    &__img
-      text-align: center     
+  .problem   
     &__content
       position: relative
       &:before
@@ -653,12 +703,14 @@ a
   &__row
     border-bottom: 1px solid rgba(0,0,0,0.3)
     padding: 8px 0 10px 
-    &--1
-      border-top: 1px solid rgba(0,0,0,0.3)
+    &--heading
+      background-color: #20bba3
   &__text
     font: 400 17px/20px $font-helvetica-medium
     color: #000   
     margin: 0  
+    &--heading
+      color: #fff
   &__link  
     font: 400 16px/20px $font-helvetica-medium
     color: #5f5f5f
@@ -855,7 +907,7 @@ a
     color: #000
     margin-bottom: 30px
   &__number
-    font: 400 150px/160px $font-helvetica-bold
+    font: 400 100px/100px $font-helvetica-bold
     text-align: center    
     color: rgba(0,0,0,0.2)  
 +r(768)
@@ -876,9 +928,7 @@ a
       margin-bottom: 50px  
   .element    
     &__text
-      font: 400 22px/26px $font-helvetica-medium  
-    &__number
-      font: 400 170px/180px $font-helvetica-bold   
+      font: 400 22px/26px $font-helvetica-medium    
 +comment("stats style")  
 .stats
   padding: 50px 0

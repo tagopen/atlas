@@ -111,16 +111,18 @@
   }
 
   // Video scroll=
-  $('.video-preview__link').on('click', function(){
-    $("html, body").animate({ scrollTop: $(".video").offset().top }, 2000);
-    return false;
-  });
+
   $(function() {
-    function videoShow() {
+   
+    $('.video-preview__link').on('click', function(){
+      $("html, body").animate({ scrollTop: $(".video").offset().top }, 2000);
+      return false;
+    });
+    var timeoutID = setTimeout ( function() {
       $('.video-preview').fadeIn('slow');
-    }
-    var timeoutID = setTimeout (videoShow, 5000);
-    clearTimeout(timeoutID);
+       clearTimeout(timeoutID);
+    }, 5000);
+   
   });
 
   $(".video-preview__close").on('click', function() {
@@ -139,6 +141,7 @@
         // ELSEWHERE, your code that needs to know the mouse position without an event
         if ((currentMousePos.y < prevMousePos.y) && (currentMousePos.y < documentTop + 21)) {
           $('#sibassa__modal').modal("show");
+          $(document).unbind('mousemove, mouseout');
         }
         prevMousePos.x = currentMousePos.x;
         prevMousePos.y = currentMousePos.y;
