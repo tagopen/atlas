@@ -977,7 +977,7 @@ a:hover, a:focus {
 /* ---------------------------------------- */
 .header {
   padding: 100px 0 30px;
-  background: url(../img/headerbg320.png) no-repeat;
+  background: #20bba3 url(../img/headerbg320.png) no-repeat;
   background-size: cover;
   background-position: left top;
 }
@@ -1202,7 +1202,7 @@ a:hover, a:focus {
     font: 700 180px/190px "HelveticaNeueCyr-Bold", sans-serif;
   }
   .work-box__text {
-    font: 700 18px/18px "HelveticaNeueCyr-Bold", sans-serif;
+    font: 700 18px/17px "HelveticaNeueCyr-Bold", sans-serif;
   }
 }
 
@@ -1369,7 +1369,7 @@ a:hover, a:focus {
 .issue__heading {
   font: 700 12px/24px "HelveticaNeueCyr-Black", sans-serif;
   margin: 0 0 10px;
-  color: #000;
+  color: #4ec5bb;
   text-transform: uppercase;
 }
 
