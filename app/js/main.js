@@ -110,20 +110,7 @@
     });
   }
 
-  // Video scroll=
-
-  $(function() {
-   
-    $('.video-preview__link').on('click', function(){
-      $("html, body").animate({ scrollTop: $(".video").offset().top }, 2000);
-      return false;
-    });
-    var timeoutID = setTimeout ( function() {
-      $('.video-preview').fadeIn('slow');
-       clearTimeout(timeoutID);
-    }, 5000);
-   
-  });
+  
 
   $(".video-preview__close").on('click', function() {
     $(".video-preview").fadeOut();
@@ -182,6 +169,20 @@ function setEqualHeight(columns)
 $(window).on('resize', function(){
   // Only 768px +
   if( $( window ).width() >= 768 ) {
+    // Video scroll=
+
+    $(function() {
+     
+      $('.video-preview__link').on('click', function(){
+        $("html, body").animate({ scrollTop: $(".video").offset().top }, 2000);
+        return false;
+      });
+      var timeoutID = setTimeout ( function() {
+        $('.video-preview').fadeIn('slow');
+        clearTimeout(timeoutID);
+      }, 5000);
+      
+  });
     // section problem
     setEqualHeight($('.issue__content'));
     setEqualHeight($('.element__text'));

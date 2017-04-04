@@ -104,6 +104,9 @@ $mail->isHTML(false);
 $mail->Subject = "Заявка номер - " . $post['user_id'];
 $mail->Body    = $body;
 
+/*header("Content-Type: text/html; charset=utf-8");
+var_dump($post); exit;
+*/
 if (!$mail->send()) {
     echo 'Что-то пошло не так. ' . $mail->ErrorInfo;
     return false;
@@ -112,7 +115,7 @@ if (!$mail->send()) {
     if ($magnet) {
         header("Location: ../oto.html");
     } else {
-        if (isset($_COOKIE['personalID']) && ($post['user_form'] != "ОТО страница")) {
+        if (isset($_COOKIE['personalID']) && ($post['user_form'] != "ОТО страница") && (!($magnet)) ) {
             unset($_COOKIE['personalID']);
             setcookie('personalID', '', time() - 3600, '/'); // empty value and old timestamp
         }
