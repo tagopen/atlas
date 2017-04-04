@@ -141,12 +141,14 @@
         // ELSEWHERE, your code that needs to know the mouse position without an event
         if ((currentMousePos.y < prevMousePos.y) && (currentMousePos.y < documentTop + 21)) {
           $('#sibassa__modal').modal("show");
+          $('#sibassaMagnet__modal').modal("show");
           $(document).unbind('mousemove, mouseout');
         }
         prevMousePos.x = currentMousePos.x;
         prevMousePos.y = currentMousePos.y;
       });
   });
+
 
   $('.question__radio-group [type=radio]').on('click, change', function() {
     var $toggle = $('.question__radio-group [type=radio]'),

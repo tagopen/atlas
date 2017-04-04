@@ -1,0 +1,141 @@
+extends base/_layout.pug
+block variables
+    - var title = 'Магнит'
+
+block styles
+
+block scripts
+
+block content
+  nav.navbar
+    div.container
+      .row
+        .col-xs-12.col-sm-8.col-md-6.col-lg-6
+          .logo
+            a.logo__img(href='#')
+              img.img-responsive.visible-xs(src='img/logo/logo320.png' alt='logo')
+              img.img-responsive.hidden-xs(src='img/logo/logo.png' alt='logo')
+            .logo__text Магазин умных приставок
+              br 
+              | для телевизоров    
+        .col-xs-12.col-sm-4.col-md-6.col-lg-6
+          .phone
+            a.phone__link(href="tel:+380673843732") 
+              i.fa.fa-phone(aria-hidden="true")
+              | +38 (067) 384 37 32   
+  
+  header.header
+    .container
+      .row
+        .col-xs-7
+          .header__text 
+            h1.header__text--span Умная приставка ATLAS для телевизора позволит смотреть телеканалы, фильмы и сериалы в HD качестве без абонплаты
+        .col-xs-5.col-sm-4
+          .header__image
+            img.img-responsive(src='img/headerimg1200.png' alt='приставка')    
+        .col-xs-12.col-sm-7.header__col
+          .header__text Сделай заказ сегодня и уже завтра твой телевизор станет мощным SmartTV 
+            span.header__text--span всего за 1960грн  
+      .row      
+        .col-xs-12.col-sm-8.col-md-6   
+          button.btn.button.button--size.button--ripple-in(data-toggle="modal" data-target="#magnet__modal") узнайте все возможности приставки  
+  section.opportunity
+    .container
+      .row
+        .col-xs-12
+          h2.heading.opportunity__heading Ваш телевизор получит новые возможности
+      .row
+        .col-xs-12.col-sm-6
+          .opportunity__image
+            img.img-responsive(src='img/opportunity1.png' alt='картинка')
+        .col-xs-12.col-sm-6
+          .opportunity__content
+            .opportunity__title Тысячи фильмов и сериалов в HD качестве
+            .opportunity__text С помощью ТВ приставки вы сможете смотреть любые фильмы и сериалы в HD качестве. Бесплатно и без рекламы. 
+      .row
+        .col-xs-12.col-sm-6.opportunity__col
+          .opportunity__image
+            img.img-responsive(src='img/opportunity2.png' alt='картинка')
+        .col-xs-12.col-sm-6
+          .opportunity__content
+            .opportunity__title Более 600 телеканалов без абонплаты
+            .opportunity__text  Смотрите сотни телеканалов без абонплаты. Фильмы, сериалы, мультфильмы, футбол, новости, шоу и многое другое.      
+      .row
+        .col-xs-12.col-sm-6
+          .opportunity__image
+            img.img-responsive(src='img/opportunity3.png' alt='картинка')
+        .col-xs-12.col-sm-6
+          .opportunity__content
+            .opportunity__title Интернет и социальные сети
+            .opportunity__text Посещайте любые сайты в интернете, смотрите видео на YouTube и пользуйтесь социальными сетями.
+      .row
+        .col-xs-12.col-sm-6.opportunity__col
+          .opportunity__image
+            img.img-responsive(src='img/opportunity4.png' alt='картинка')
+        .col-xs-12.col-sm-6
+          .opportunity__content
+            .opportunity__title Тысячи игр и приложений
+            .opportunity__text Приставка дает возможность играть в игры прямо на вашем телевизоре! Просто зайдите в Google Play.     
+  section.service
+    .container
+      .row
+        .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-4
+          h2.heading.service__heading.heading--color Узнайте все 17 возможностей приставки ATLAS BOX PRO 
+        .col-xs-8.col-xs-offset-2.col-sm-4.col-sm-offset-0
+          .service__img
+            img.img-responsive(src='img/service1.png' alt='картинка')
+        .col-xs-12.col-sm-8  
+          .service__content
+            .row
+              .col-xs-12.text-center
+                p.service__text Заполните форму ниже и вы получите PDF файл с описанием всех возможностей этой приставки, и список телеканалов, к которым вы получите доступ . 
+              .col-xs-12
+                form.contactForm.modal__form(method='post', action='./mail/mail.php')
+                  .row
+                    .col-xs-12.col-sm-8.col-sm-offset-2.col-md-12.col-md-offset-0
+                      .row
+                        .form-group.col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+                          input.form-control.form__input.form__name(aria-invalid='false', placeholder='Введите ваш email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='email')
+                          i.fa.fa-envelope(aria-hidden="true")
+                          p.help-block.text-danger
+                        .clearfix
+                          .success
+                    .col-xs-12.col-md-9.col-md-offset-2.col-lg-8      
+                      .text-center
+                        button.btn.button.button--size.button--ripple-in(name='form[Магнит - Узнайте 17 возможностей]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать все возможности приставки
+                        p.service__subtext * Гарантируем полную конфиденциальность. Ваши данные не будут переданы третьим лицам
+
+  include partials/_work.pug
+  include partials/_connect.pug
+  section.service
+    .container
+      .row
+        .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-4
+          h2.heading.service__heading.heading--color Узнайте все 17 возможностей приставки ATLAS BOX PRO 
+        .col-xs-8.col-xs-offset-2.col-sm-4.col-sm-offset-0
+          .service__img
+            img.img-responsive(src='img/service1.png' alt='картинка')
+        .col-xs-12.col-sm-8  
+          .service__content
+            .row
+              .col-xs-12.text-center
+                p.service__text Заполните форму ниже и вы получите PDF файл с описанием всех возможностей этой приставки, и список телеканалов, к которым вы получите доступ . 
+              .col-xs-12
+                form.contactForm.modal__form(method='post', action='./mail/mail.php')
+                  .row
+                    .col-xs-12.col-sm-8.col-sm-offset-2.col-md-12.col-md-offset-0
+                      .row
+                        .form-group.col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+                          input.form-control.form__input.form__name(aria-invalid='false', placeholder='Введите ваш email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='email')
+                          i.fa.fa-envelope(aria-hidden="true")
+                          p.help-block.text-danger
+                        .clearfix
+                          .success
+                    .col-xs-12.col-md-9.col-md-offset-2.col-lg-8      
+                      .text-center
+                        button.btn.button.button--size.button--ripple-in(name='form[Магнит - Узнайте 17 возможностей]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать все возможности приставки
+                        p.service__subtext * Гарантируем полную конфиденциальность. Ваши данные не будут переданы третьим лицам
+    
+
+block footer
+  include partials/_magnetModals.pug

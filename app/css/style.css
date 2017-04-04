@@ -977,7 +977,7 @@ a:hover, a:focus {
 /* ---------------------------------------- */
 .header {
   padding: 100px 0 30px;
-  background: #20bba3 url(../img/headerbg320.png) no-repeat;
+  background: #20bba3 url(../img/headerbg.jpg) no-repeat;
   background-size: cover;
   background-position: left top;
 }
@@ -1008,9 +1008,8 @@ a:hover, a:focus {
 @media only screen and (min-width: 768px) {
   .header {
     padding: 35px 0 45px;
-    background: url(../img/headerbg.png) no-repeat;
     background-size: cover;
-    background-position: 57% top;
+    background-position: 50% top;
   }
   .header__col {
     text-align: left;
@@ -2518,6 +2517,10 @@ a:hover, a:focus {
   margin-bottom: 30px;
 }
 
+.success__text--color {
+  color: #383a47;
+}
+
 .success__video {
   height: 164px;
 }
@@ -2553,5 +2556,120 @@ a:hover, a:focus {
   }
   .success__video {
     height: 270px;
+  }
+}
+
+/* ---------------------------------------- */
+/* O T O    P A G E    S T Y L E            */
+/* ---------------------------------------- */
+.oto {
+  background: url(../img/tybg.png) no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+}
+
+.oto__heading {
+  font: 700 16px/20px "HelveticaNeueCyr-Bold", sans-serif;
+  color: #383a47;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.oto__video {
+  position: relative;
+  height: 176px;
+  width: 290px;
+  margin: 0 auto 30px;
+  background: url(../img/mac.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.oto__iframe {
+  position: absolute;
+  z-index: 20;
+  left: 34px;
+  height: 140px;
+  width: 224px;
+  top: 10px;
+}
+
+.oto__btn {
+  white-space: normal;
+}
+
+.oto__modal {
+  background: rgba(56, 58, 71, 0.7);
+  padding: 30px 15px 15px;
+}
+
+.oto__text {
+  color: #fff;
+}
+
+@media only screen and (min-width: 400px) {
+  .oto__video {
+    width: 350px;
+    height: 250px;
+  }
+  .oto__iframe {
+    left: 40px;
+    height: 166px;
+    width: 270px;
+    top: 32px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .oto__video {
+    width: 450px;
+    height: 300px;
+  }
+  .oto__iframe {
+    left: 54px;
+    height: 218px;
+    width: 344px;
+    top: 28px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .oto__heading {
+    font: 700 24px/28px "HelveticaNeueCyr-Bold", sans-serif;
+  }
+  .oto__modal {
+    padding: 40px 35px 20px;
+  }
+  .oto__video {
+    height: 350px;
+    width: auto;
+  }
+  .oto__iframe {
+    left: 138px;
+    height: 280px;
+    width: 446px;
+    top: 19px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .oto__video {
+    margin-bottom: 0;
+    height: 380px;
+  }
+  .oto__iframe {
+    left: 65px;
+    height: 256px;
+    width: 407px;
+    top: 47px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .oto__iframe {
+    left: 66px;
+    height: 268px;
+    width: 424px;
+    top: 40px;
   }
 }
