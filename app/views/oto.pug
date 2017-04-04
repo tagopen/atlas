@@ -18,8 +18,7 @@ block content
                 img.img-responsive.hidden-xs(src='img/logo/logo.png' alt='logo')
               .logo__text Магазин умных приставок
                 br 
-                | для телевизоров  
-
+                | для телевизоров   
     .oto  
       .container
         .row
@@ -41,8 +40,8 @@ block content
                       .col-xs-12.col-sm-8.col-sm-offset-2.col-md-12.col-md-offset-0
                         .row
                           .form-group.col-xs-12
-                            input.form-control.form__input.form__name(aria-invalid='false', placeholder='Введите ваш email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='email')
-                            i.fa.fa-envelope(aria-hidden="true")
+                            input.form-control.form__input.form__phone.form__input--phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+                            i.fa.fa-phone(aria-hidden="true")
                             p.help-block.text-danger
                           .clearfix
                             .success
