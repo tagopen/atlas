@@ -75,17 +75,20 @@ $body .= $post[$key] . chr(10) . chr(13);
 }*/
 
 
-$magnet = (($post['user_form'] == "Магнит - Хедер") || ($post['user_form'] == "Магнит - Узнайте 17 возможностей") || ($post['user_form'] == "Магнит - Узнайте 17 возможностей") || ($post['user_form'] == "Магнит - Выход с сайта"));
+$magnet = (($post['user_form'] == "Магнит - Хедер") || 
+    ($post['user_form'] == "Магнит - Узнайте 17 возможностей") || 
+    ($post['user_form'] == "Магнит - Узнайте 17 возможностей") || 
+    ($post['user_form'] == "Магнит - Выход с сайта"));
 
-if ($magnet) { 
+if ($magnet || ($post['user_form'] == "ОТО страница")) {
     if (!empty($_COOKIE["personalID"])) {
-    $post['user_id'] = filter_input(INPUT_POST, 'personalID', FILTER_SANITIZE_STRING);
-    $body .= 'Индентификатор пользователя: ' . $post['user_id'] . chr(10) . chr(13);
-} else {
-    $post['user_id'] = uniqid('_');
-    setcookie("personalID", $post['user_id'], time() + 60 * 5, "/");
-    $body .= 'Индентификатор пользователя: ' . $post['user_id'] . chr(10) . chr(13);
-}
+        $post['user_id'] = filter_input(INPUT_COOKIE, 'personalID', FILTER_SANITIZE_STRING);
+        $body .= 'Индентификатор пользователя: ' . $post['user_id'] . chr(10) . chr(13);
+    } else {
+        $post['user_id'] = uniqid('_');
+        setcookie("personalID", $post['user_id'], time() + 60 * 5, "/");
+        $body .= 'Индентификатор пользователя: ' . $post['user_id'] . chr(10) . chr(13);
+    }
 }
 
 $mail = new PHPMailer();
@@ -95,13 +98,14 @@ $mail->CharSet = 'UTF-8';
 $mail->IsSendmail();
 
 $from = 'no-reply@tagopen.com';
-$to   = "marchik88@rambler.ru";
+//$to   = "marchik88@rambler.ru";
+$to = "Artem2431@gmail.com";
 $mail->SetFrom($from, HOST_NAME);
 $mail->AddAddress($to);
 
 $mail->isHTML(false);
 
-$mail->Subject = "Заявка номер - " . $post['user_id'];
+$mail->Subject = ($post['user_id']) ? "Заявка номер - " . $post['user_id'] : "Новая заявка";
 $mail->Body    = $body;
 
 /*header("Content-Type: text/html; charset=utf-8");
@@ -115,7 +119,7 @@ if (!$mail->send()) {
     if ($magnet) {
         header("Location: ../oto.html");
     } else {
-        if (isset($_COOKIE['personalID']) && ($post['user_form'] != "ОТО страница") && (!($magnet)) ) {
+        if (isset($_COOKIE['personalID'])) {
             unset($_COOKIE['personalID']);
             setcookie('personalID', '', time() - 3600, '/'); // empty value and old timestamp
         }
