@@ -116,7 +116,9 @@
     $(".video-preview").fadeOut();
   });
   
-  $(function($) {
+
+
+  var closeWindow = function() {
     var currentMousePos = { x: -1, y: -1 },
         prevMousePos    = {x: -1, y: -1},
         documentTop     = $(document).scrollTop();
@@ -134,9 +136,13 @@
         prevMousePos.x = currentMousePos.x;
         prevMousePos.y = currentMousePos.y;
       });
+  }
+
+  
+  $(window).load(function(){
+    setTimeout(closeWindow, 7000);
   });
-
-
+  
   $('.question__radio-group [type=radio]').on('click, change', function() {
     var $toggle = $('.question__radio-group [type=radio]'),
         $this   = $(this),
