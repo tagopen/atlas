@@ -74,11 +74,7 @@ $body .= $post[$key] . chr(10) . chr(13);
 }
 }*/
 
-
-$magnet = (($post['user_form'] == "Магнит - Хедер") || 
-    ($post['user_form'] == "Магнит - Узнайте 17 возможностей") || 
-    ($post['user_form'] == "Магнит - Узнайте 17 возможностей") || 
-    ($post['user_form'] == "Магнит - Выход с сайта"));
+$magnet = (($post['user_form'] == "Магнит - Хедер") || ($post['user_form'] == "Магнит - Узнайте 17 возможностей"));
 
 if ($magnet || ($post['user_form'] == "ОТО страница")) {
     if (!empty($_COOKIE["personalID"])) {
@@ -97,9 +93,8 @@ $mail->CharSet = 'UTF-8';
 
 $mail->IsSendmail();
 
-$from = 'no-reply@tagopen.com';
-//$to   = "marchik88@rambler.ru";
-$to = "Artem2431@gmail.com";
+$from = 'no-reply@atlas.plus';
+$to = "boxpro17@gmail.com";
 $mail->SetFrom($from, HOST_NAME);
 $mail->AddAddress($to);
 
