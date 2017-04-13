@@ -4,24 +4,53 @@ block variables
 block styles
 
 block scripts
-
+  script.
+    /** This section is only needed once per page if manually copying **/
+    if (typeof MauticSDKLoaded == 'undefined') {
+      var MauticSDKLoaded = true;
+      var head = document.getElementsByTagName('head')[0];
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://well-done.mautic.net/mautic/media/js/mautic-form.js';
+      script.onload = function() {
+        MauticSDK.onLoad();
+      };
+      head.appendChild(script);
+      var MauticDomain = 'https://well-done.mautic.net';
+      var MauticLang = {
+        'submittingMessage': "Please wait..."
+      }
+    }
+  script.
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '404911039879467', {
+        em: 'insert_email_variable,'
+      });
+      fbq('track', 'PageView');
+  noscript
+    img(height='1', width='1', style='display:none', src='https://www.facebook.com/tr?id=404911039879467&ev=PageVie..')
 block content
-    include components/_nav.pug
-    include partials/_header.pug
-    include partials/_work.pug
-    include partials/_opportunity.pug
-    include partials/_service.pug
-    include partials/_problem.pug
-    include partials/_console.pug
-    include partials/_question.pug
-    include partials/_video.pug
-    include partials/_part.pug
-    include partials/_stats.pug
-    include partials/_connect.pug
-    include partials/_comment.pug
-    include partials/_bonus.pug
-    include partials/_map.pug
+  include components/_nav.pug
+  include partials/_header.pug
+  include partials/_work.pug
+  include partials/_opportunity.pug
+  include partials/_service.pug
+  include partials/_problem.pug
+  include partials/_console.pug
+  include partials/_question.pug
+  include partials/_video.pug
+  include partials/_part.pug
+  include partials/_stats.pug
+  include partials/_connect.pug
+  include partials/_comment.pug
+  include partials/_bonus.pug
+  include partials/_map.pug
     
 block footer
-    include partials/_footer.pug
-    include partials/_modals.pug
+  include partials/_footer.pug
+block modal
+  include partials/_modal.pug

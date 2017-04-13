@@ -1,52 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru" prefix="og: http://ogp.me/ns#">
   <head>
-    <title>Главная страница</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>ATLAS - умные приставки для телевизора</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
     <!-- Meta SEO - Description, Keywords, Title-->
-    <meta name="title" content=""/>
+    <meta name="title" content="ATLAS - умные приставки для телевизора"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
     <!-- Multilanguage localization-->
     <link rel="alternate" href="/" hreflang="x-default"/>
-    <link rel="alternate" href="/en/" hreflang="en"/>
-    <link rel="alternate" href="/ru/" hreflang="ru"/>
     <!-- Mobile viewport optimization-->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="HandheldFriendly" content="true"/>
     <meta name="MobileOptimized" content="320"/>
     <!--[if IEMobile]><meta http-equiv='cleartype' content='on' /><![endif]-->
     <!-- Replace favicon.ico and apple-touch-icon.png-->
-    <link rel="shortcut icon" type="image/ico" href="img/logo/favicon.ico">
-    <link rel="apple-touch-icon" type="image/ico" href="img/logo/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/favicon.ico">
+    <link rel="apple-touch-icon" type="image/png" href="img/logo/apple-touch-icon.png">
     <!-- Disables automatic  of possible phone numbers and address in Safari on iOS-->
     <meta name="format-detection" content="telephone=no"/>
     <meta name="format-detection" content="address=no"/>
     <!-- Microformats Open Graph-->
-    <meta property="og:title" content="My Site"/>
-    <meta property="og:site_name" content="My Site"/>
-    <meta property="og:description" content="My Site is cool"/>
+    <meta property="og:title" content="ATLAS - умные приставки для телевизора"/>
+    <meta property="og:site_name" content="ATLAS - умные приставки для телевизора"/>
+    <meta property="og:description" content="Умная приставка ATLAS для телевизора позволит смотреть телеканалы, фильмы и сериалы в HD качестве без абонплаты"/>
     <meta property="og:type" content="website"/>
     <meta property="og:locale" content="ru_RU"/>
-    <meta property="og:locale:alternate" content="en_US"/>
-    <meta property="og:image" content="img/logo/microformat.png"/>
+    <meta property="og:image" content="/img/logo/microformat.pngmicroformat.png"/>
     <meta property="og:image:type" content="image/png"/>
-    <meta property="og:url" content="http://url.com"/>
+    <meta property="og:url" content=""/>
     <!-- Microformats Twitter Cards-->
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@flickr"/>
-    <meta name="twitter:title" content="My Site"/>
-    <meta name="twitter:description" content="My Site is cool"/>
-    <meta name="twitter:image" content="img/logo/microformat.png"/>
+    <meta name="twitter:title" content="ATLAS - умные приставки для телевизора"/>
+    <meta name="twitter:description" content="Умная приставка ATLAS для телевизора позволит смотреть телеканалы, фильмы и сериалы в HD качестве без абонплаты"/>
+    <meta name="twitter:image" content="/img/logo/microformat.png"/>
     <!-- build:css css/bundle.min.css-->
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Font-Awesome CSS-->
     <link rel="stylesheet" href="css/font-awesome.css">
-    <!-- Fancybox CSS   -->
+    <!-- Fancybox CSS-->
     <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <!-- Custom CSS -->
+    <!-- Custom CSS-->
     <link rel="stylesheet" href="css/style.css">
     <!-- endbuild-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
@@ -55,7 +52,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
   </head>
-  <body class="body loaded">
+  <body class="body">
     <div class="wrapper">
       <nav class="navbar">
         <div class="container">
@@ -239,31 +236,36 @@
                     <p class="service__text">Заполните форму ниже и вы получите PDF файл с описанием всех возможностей этой приставки, и список телеканалов, к которым вы получите доступ . </p>
                   </div>
                   <div class="col-xs-12">
-                    <form class="contactForm modal__form" method="post" action="./mail/mail.php">
-                      <div class="row">
-                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-12 col-md-offset-0">
-                          <div class="row">
-                            <div class="form-group col-xs-12 col-md-6">
-                              <input class="form-control form__input form__phone form__input--phone" aria-invalid="false" placeholder="+38(___)___-__-__" required data-validation-required-message="Заполните поле корректно." name="phone" type="tel"><i class="fa fa-phone" aria-hidden="true"></i>
-                              <p class="help-block text-danger"></p>
+                    <div class="mauticform_wrapper" id="mauticform_wrapper_leadmagnit">
+                      <form id="mauticform_leadmagnit" autocomplete="false" role="form" method="post" action="https://well-done.mautic.net/form/submit?formId=1" data-mautic-form="leadmagnit">
+                        <div class="row">
+                          <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-12 col-md-offset-0">
+                            <div class="row">
+                              <div class="form-group col-xs-12 col-md-offset-3 col-md-6">
+                                <div class="mauticform-error" id="mauticform_leadmagnit_error"></div>
+                                <div class="mauticform-message" id="mauticform_leadmagnit_message"></div>
+                                <div class="mauticform-innerform">
+                                  <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
+                                    <div class="mauticform-row mauticform-email mauticform-field-1" id="mauticform_leadmagnit_email">
+                                      <label class="mauticform-label" id="mauticform_label_leadmagnit_email" for="mauticform_input_leadmagnit_email"></label>
+                                      <input class="mauticform-input form-control form__input" id="mauticform_input_leadmagnit_email" name="mauticform[email]" value="" required="" placeholder="Введите ваш email" type="email"><i class="fa fa-envelope" aria-hidden="true"></i><span class="mauticform-errormsg" style="display: none;"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xs-12 col-md-9 col-md-offset-2 col-lg-8">
+                                <div class="mauticform-row mauticform-button-wrapper mauticform-field-2" id="mauticform_leadmagnit_submit">
+                                  <button class="mauticform-button btn button button--size button--ripple-in" id="mauticform_input_leadmagnit_submit" type="submit" name="mauticform[submit]" value="">Узнайте все возможности приставки</button>
+                                </div>
+                              </div>
                             </div>
-                            <div class="form-group col-xs-12 col-md-6">
-                              <input class="form-control form__input form__name" aria-invalid="false" placeholder="Введите ваш email" required data-validation-required-message="Заполните поле корректно." name="email" type="email"><i class="fa fa-envelope" aria-hidden="true"></i>
-                              <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="clearfix">
-                              <div class="success"></div>
-                            </div>
+                            <input id="mauticform_leadmagnit_id" type="hidden" name="mauticform[formId]" value="1">
+                            <input id="mauticform_leadmagnit_return" type="hidden" name="mauticform[return]" value="">
+                            <input id="mauticform_leadmagnit_name" type="hidden" name="mauticform[formName]" value="leadmagnit">
                           </div>
                         </div>
-                        <div class="col-xs-12 col-md-9 col-md-offset-2 col-lg-8">     
-                          <div class="text-center">
-                            <button class="btn button button--size button--ripple-in" name="form[Узнайте 17 возможностей]" type="submit" data-loading-text="&lt;i class='fa fa-circle-o-notch fa-spin'&gt;&lt;/i&gt; Файл отправляется...">Узнать все возможности приставки</button>
-                            <p class="service__subtext">* Гарантируем полную конфиденциальность. Ваши данные не будут переданы третьим лицам</p>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1227,16 +1229,6 @@
         </div>
       </div>
     </div>
-    <div id="loading">
-      <div id="loading-center">
-        <div id="loading-center-absolute">
-          <div class="object" id="object_four"></div>
-          <div class="object" id="object_three"></div>
-          <div class="object" id="object_two"></div>
-          <div class="object" id="object_one"></div>
-        </div>
-      </div>
-    </div>
     <!-- build:js js/bundle.min.js-->
     <!--Modernizr JavaScript-->
     <script src="js/modernizr-custom.js"></script>
@@ -1246,9 +1238,39 @@
     <script src="js/bootstrap.js"></script>
     <!-- Old browsers reject JavaScript-->
     <script src="js/jquery.reject.js"></script>
+    <script>
+      /** This section is only needed once per page if manually copying **/
+      if (typeof MauticSDKLoaded == 'undefined') {
+        var MauticSDKLoaded = true;
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://well-done.mautic.net/mautic/media/js/mautic-form.js';
+        script.onload = function() {
+          MauticSDK.onLoad();
+        };
+        head.appendChild(script);
+        var MauticDomain = 'https://well-done.mautic.net';
+        var MauticLang = {
+          'submittingMessage': "Please wait..."
+        }
+      }
+    </script>
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '404911039879467', {
+          em: 'insert_email_variable,'
+        });
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none;" src="https://www.facebook.com/tr?id=404911039879467&amp;ev=PageVie.."></noscript>
     <!-- Masked Input JavaScript-->
     <script src="js/jquery.maskedinput.js"></script>
-    <!-- Fancybox JavaScript    -->
+    <!-- Fancybox JavaScript-->
     <script src="js/jquery.fancybox.js"></script>
     <script src="js/jquery.fancybox.pack.js"></script>
     <!-- Slick-Slider JavaScript-->
@@ -1256,5 +1278,43 @@
     <!-- Custom JavaScript-->
     <script src="js/main.js"></script>
     <!-- endbuild-->
+    <!-- Google Analytics-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-39365664-15', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- Yandex Metrika-->
+    <script>
+      (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+          try {
+            w.yaCounter43998029 = new Ya.Metrika({
+              id:43998029,
+              clickmap:true,
+              trackLinks:true,
+              accurateTrackBounce:true,
+              webvisor:true,
+              trackHash:true
+            });
+          } catch(e) { }
+        });
+        var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+        if (w.opera == "[object Opera]") {
+          d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+      <div><img src="https://mc.yandex.ru/watch/43998029" style="position:absolute; left:-9999px;" alt=""></div>
+    </noscript>
   </body>
 </html>

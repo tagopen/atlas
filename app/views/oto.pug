@@ -1,10 +1,23 @@
 extends base/_layout.pug
 block variables
-  - var title = 'Ваша заявка принята'
 
 block styles
 
 block scripts
+  // FB Pixel code
+  script.
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '404911039879467', {
+    em: 'insert_email_variable,'
+    });
+    fbq('track', 'PageView');
+  noscript
+    img(height='1', width='1', style='display:none', src='https://www.facebook.com/tr?id=404911039879467&ev=PageVie..')
+  // /FB Pixel code
 
 block content
   div.success
@@ -25,14 +38,14 @@ block content
           .col-xs-12.col-sm-10.col-sm-offset-1
             p.oto__heading Статья “17 возможностей приставок ATLAS” придет тебе в течении нескольких минут. Посмотри видео, чтобы узнать какой подарок мы для тебя подготовили  
         .row
-          .col-xs-12.col-md-7.col-md-offset-0.col-lg-6
+          .col-xs-12.col-md-7.col-md-offset-0.col-lg-6.oto__col
             .oto__video
-              iframe.oto__iframe(src="https://www.youtube.com/embed/2gqHfZyEYmE?autoplay=1" frameborder="0" allowfullscreen)  
+              iframe.oto__iframe(src='https://www.youtube.com/embed/qVWlgEPCbVM?autoplay=1', frameborder='0', allowfullscreen='')
           .col-xs-12.col-sm-10.col-sm-offset-1.col-md-5.col-md-offset-0.col-lg-6
             .modal-content.modal__content.oto__modal
               .modal__head
                 p.modal__text.oto__text
-                  | Заполните форму, чтобы сэкономить 450 грн и получить бесплатную доставку, установку и настройку приставки у вас дома!
+                  | Заполните форму, чтобы сэкономить 540 грн и получить бесплатную доставку, установку и настройку приставки у вас дома!
               form.contactForm.modal__form(method='post', action='./mail/mail.php')
                 .row
                   .col-xs-12
@@ -47,7 +60,7 @@ block content
                             .success
                       .col-xs-12
                         .text-center
-                          button.btn.button.button--size.oto__btn(name='form[ОТО страница]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Воспользоваться предложением и сэкономить 450 грн
+                          button.btn.button.button--size.oto__btn(name='form[ОТО страница]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Воспользоваться предложением и сэкономить 540 грн
                           p.modal__subtext.oto__text
                             i.fa.fa-lock(aria-hidden='true')
                             | Гарантируем полную конфиденциальность ваших данных

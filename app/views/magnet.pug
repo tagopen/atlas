@@ -1,11 +1,44 @@
 extends base/_layout.pug
 block variables
-    - var title = 'Магнит'
 
 block styles
 
 block scripts
+  // Google Analytics Content Experiment code
+  script.
+    function utmx_section(){}function utmx(){}(function(){var
+    k='147297418-7',d=document,l=d.location,c=d.cookie;
+    if(l.search.indexOf('utm_expid='+k)>0)return;
+    function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+    indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+    length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+    '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+    '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+    '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+    valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+    '" type="text/javascript" charset="utf-8"><\\/sc'+'ript>')})();
+  script.
+    utmx('url','A/B');
+  // End of Google Analytics Content Experiment code
 
+  // FB Pixel code
+  script.
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '404911039879467', {
+    em: 'insert_email_variable,'
+    });
+    fbq('track', 'PageView');
+  noscript
+    img(height='1', width='1', style='display:none', src='https://www.facebook.com/tr?id=404911039879467&ev=PageVie..')
+  // /FB Pixel code
+  // CODE FOR leads-telegram.ru
+  script(type='text/javascript').
+    var telegram_leads_code = false;
+  script(src='//leads-telegram.ru/js/telegram_leads.min.js')
 block content
   nav.navbar
     div.container
@@ -29,13 +62,13 @@ block content
       .row
         .col-xs-7
           .header__text 
-            h1.header__text--span Умная приставка ATLAS для телевизора позволит смотреть телеканалы, фильмы и сериалы в HD качестве без абонплаты
+            h1.header__text--span Умная приставка ATLAS для телевизора позволяет смотреть телеканалы, фильмы и&nbsp;сериалы в&nbsp;HD качестве без абонплаты
         .col-xs-5.col-sm-4
           .header__image
             img.img-responsive(src='img/headerimg1200.png' alt='приставка')    
         .col-xs-12.col-sm-7.header__col
-          .header__text Сделай заказ сегодня и уже завтра твой телевизор станет мощным SmartTV 
-            span.header__text--span всего за 1960грн  
+          .header__text Узнай 17&nbsp;новых функций, которые получит твой телевизор благодаря приставке!
+            //-span.header__text--span
       .row      
         .col-xs-12.col-sm-8.col-md-6   
           button.btn.button.button--size.button--ripple-in(data-toggle="modal" data-target="#magnet__modal") узнайте все возможности приставки  
@@ -90,20 +123,29 @@ block content
               .col-xs-12.text-center
                 p.service__text Заполните форму ниже и вы получите PDF файл с описанием всех возможностей этой приставки, и список телеканалов, к которым вы получите доступ . 
               .col-xs-12
-                form.contactForm.modal__form(method='post', action='./mail/mail.php')
-                  .row
-                    .col-xs-12.col-sm-8.col-sm-offset-2.col-md-12.col-md-offset-0
-                      .row
-                        .form-group.col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
-                          input.form-control.form__input.form__name(aria-invalid='false', placeholder='Введите ваш email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='email')
-                          i.fa.fa-envelope(aria-hidden="true")
-                          p.help-block.text-danger
-                        .clearfix
-                          .success
-                    .col-xs-12.col-md-9.col-md-offset-2.col-lg-8      
-                      .text-center
-                        button.btn.button.button--size.button--ripple-in(name='form[Магнит - Узнайте 17 возможностей]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать все возможности приставки
-                        p.service__subtext * Гарантируем полную конфиденциальность. Ваши данные не будут переданы третьим лицам
+                #mauticform_wrapper_leadmagnit.mauticform_wrapper
+                  form#mauticform_leadmagnit(autocomplete='false', role='form', method='post', action='https://well-done.mautic.net/form/submit?formId=1', data-mautic-form='leadmagnit')
+                    .row
+                      .col-xs-12.col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+                        .row
+                          .form-group.col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+                            #mauticform_leadmagnit_error.mauticform-error
+                            #mauticform_leadmagnit_message.mauticform-message
+                            .mauticform-innerform
+                              .mauticform-page-wrapper.mauticform-page-1(data-mautic-form-page='1')
+                                #mauticform_leadmagnit_email.mauticform-row.mauticform-email.mauticform-field-1
+                                  label#mauticform_label_leadmagnit_email.mauticform-label(for='mauticform_input_leadmagnit_email')
+                                  input#mauticform_input_leadmagnit_email.mauticform-input.form-control.form__input(name='mauticform[email]', value='', required='', placeholder='Введите ваш email', type='email')
+                                  i.fa.fa-envelope(aria-hidden='true')
+                                  span.mauticform-errormsg(style='display: none;')
+                          .col-xs-12.col-md-9.col-md-offset-2.col-lg-8
+                            #mauticform_leadmagnit_submit.mauticform-row.mauticform-button-wrapper.mauticform-field-2
+                              button#mauticform_input_leadmagnit_submit.mauticform-button.btn.button.button--size.button--ripple-in(type='submit', name='mauticform[submit]', value='') Узнать все возможности приставки
+                              p.service__subtext
+                                | * Гарантируем полную конфиденциальность. Ваши данные не будут переданы третьим лицам
+                        input#mauticform_leadmagnit_id(type='hidden', name='mauticform[formId]', value='1')
+                        input#mauticform_leadmagnit_return(type='hidden', name='mauticform[return]', value='')
+                        input#mauticform_leadmagnit_name(type='hidden', name='mauticform[formName]', value='leadmagnit')
 
   include partials/_work.pug
   include partials/_connect.pug
@@ -117,25 +159,33 @@ block content
             img.img-responsive(src='img/service1.png' alt='картинка')
         .col-xs-12.col-sm-8  
           .service__content
-            .row
-              .col-xs-12.text-center
-                p.service__text Заполните форму ниже и вы получите PDF файл с описанием всех возможностей этой приставки, и список телеканалов, к которым вы получите доступ . 
-              .col-xs-12
-                form.contactForm.modal__form(method='post', action='./mail/mail.php')
-                  .row
-                    .col-xs-12.col-sm-8.col-sm-offset-2.col-md-12.col-md-offset-0
+            form.contactForm.modal__form.this_is_my_lead_form(method='post', action='./mail/mail.php', name='form_lead_stt')
+              .row
+                .col-xs-12.text-center
+                  p.service__text Заполните форму ниже и вы получите PDF файл с описанием всех возможностей этой приставки, и список телеканалов, к которым вы получите доступ . 
+                .col-xs-12
+                  #mauticform_wrapper_leadmagnit.mauticform_wrapper
+                    form#mauticform_leadmagnit(autocomplete='false', role='form', method='post', action='https://well-done.mautic.net/form/submit?formId=1', data-mautic-form='leadmagnit')
                       .row
-                        .form-group.col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
-                          input.form-control.form__input.form__name(aria-invalid='false', placeholder='Введите ваш email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='email')
-                          i.fa.fa-envelope(aria-hidden="true")
-                          p.help-block.text-danger
-                        .clearfix
-                          .success
-                    .col-xs-12.col-md-9.col-md-offset-2.col-lg-8      
-                      .text-center
-                        button.btn.button.button--size.button--ripple-in(name='form[Магнит - Узнайте 17 возможностей]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать все возможности приставки
-                        p.service__subtext * Гарантируем полную конфиденциальность. Ваши данные не будут переданы третьим лицам
-    
-
-block footer
+                        .col-xs-12.col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+                          .row
+                            .form-group.col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+                              #mauticform_leadmagnit_error.mauticform-error
+                              #mauticform_leadmagnit_message.mauticform-message
+                              .mauticform-innerform
+                                .mauticform-page-wrapper.mauticform-page-1(data-mautic-form-page='1')
+                                  #mauticform_leadmagnit_email.mauticform-row.mauticform-email.mauticform-field-1
+                                    label#mauticform_label_leadmagnit_email.mauticform-label(for='mauticform_input_leadmagnit_email')
+                                    input#mauticform_input_leadmagnit_email.mauticform-input.form-control.form__input(name='mauticform[email]', value='', required='', placeholder='Введите ваш email', type='email')
+                                    i.fa.fa-envelope(aria-hidden='true')
+                                    span.mauticform-errormsg(style='display: none;')
+                            .col-xs-12.col-md-9.col-md-offset-2.col-lg-8
+                              #mauticform_leadmagnit_submit.mauticform-row.mauticform-button-wrapper.mauticform-field-2
+                                button#mauticform_input_leadmagnit_submit.mauticform-button.btn.button.button--size.button--ripple-in(type='submit', name='mauticform[submit]', value='') Узнать все возможности приставки
+                                p.service__subtext
+                                  | * Гарантируем полную конфиденциальность. Ваши данные не будут переданы третьим лицам
+                          input#mauticform_leadmagnit_id(type='hidden', name='mauticform[formId]', value='1')
+                          input#mauticform_leadmagnit_return(type='hidden', name='mauticform[return]', value='')
+                          input#mauticform_leadmagnit_name(type='hidden', name='mauticform[formName]', value='leadmagnit')
+block modal
   include partials/_magnetModals.pug

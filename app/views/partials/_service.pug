@@ -12,21 +12,24 @@ section.service
             .col-xs-12.text-center
               p.service__text Заполните форму ниже и вы получите PDF файл с описанием всех возможностей этой приставки, и список телеканалов, к которым вы получите доступ . 
             .col-xs-12
-              form.contactForm.modal__form(method='post', action='./mail/mail.php')
-                .row
-                  .col-xs-12.col-sm-8.col-sm-offset-2.col-md-12.col-md-offset-0
-                    .row
-                      .form-group.col-xs-12.col-md-6
-                        input.form-control.form__input.form__phone.form__input--phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
-                        i.fa.fa-phone(aria-hidden="true")
-                        p.help-block.text-danger
-                      .form-group.col-xs-12.col-md-6
-                        input.form-control.form__input.form__name(aria-invalid='false', placeholder='Введите ваш email', required, data-validation-required-message='Заполните поле корректно.', name='email', type='email')
-                        i.fa.fa-envelope(aria-hidden="true")
-                        p.help-block.text-danger
-                      .clearfix
-                        .success
-                  .col-xs-12.col-md-9.col-md-offset-2.col-lg-8      
-                    .text-center
-                      button.btn.button.button--size.button--ripple-in(name='form[Узнайте 17 возможностей]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Узнать все возможности приставки
-                      p.service__subtext * Гарантируем полную конфиденциальность. Ваши данные не будут переданы третьим лицам
+              #mauticform_wrapper_leadmagnit.mauticform_wrapper
+                form#mauticform_leadmagnit(autocomplete='false', role='form', method='post', action='https://well-done.mautic.net/form/submit?formId=1', data-mautic-form='leadmagnit')
+                  .row
+                    .col-xs-12.col-sm-8.col-sm-offset-2.col-md-12.col-md-offset-0
+                      .row
+                        .form-group.col-xs-12.col-md-offset-3.col-md-6
+                          #mauticform_leadmagnit_error.mauticform-error
+                          #mauticform_leadmagnit_message.mauticform-message
+                          .mauticform-innerform
+                            .mauticform-page-wrapper.mauticform-page-1(data-mautic-form-page='1')
+                              #mauticform_leadmagnit_email.mauticform-row.mauticform-email.mauticform-field-1
+                                label#mauticform_label_leadmagnit_email.mauticform-label(for='mauticform_input_leadmagnit_email')
+                                input#mauticform_input_leadmagnit_email.mauticform-input.form-control.form__input(name='mauticform[email]', value='', required='', placeholder='Введите ваш email', type='email')
+                                i.fa.fa-envelope(aria-hidden='true')
+                                span.mauticform-errormsg(style='display: none;')
+                        .col-xs-12.col-md-9.col-md-offset-2.col-lg-8
+                          #mauticform_leadmagnit_submit.mauticform-row.mauticform-button-wrapper.mauticform-field-2
+                            button#mauticform_input_leadmagnit_submit.mauticform-button.btn.button.button--size.button--ripple-in(type='submit', name='mauticform[submit]', value='') Узнайте все возможности приставки
+                      input#mauticform_leadmagnit_id(type='hidden', name='mauticform[formId]', value='1')
+                      input#mauticform_leadmagnit_return(type='hidden', name='mauticform[return]', value='')
+                      input#mauticform_leadmagnit_name(type='hidden', name='mauticform[formName]', value='leadmagnit')
