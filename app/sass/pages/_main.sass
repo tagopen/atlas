@@ -24,22 +24,13 @@ a
     box-shadow: 1.5px 2.6px 7px rgba(0, 0, 0, 0.16)
     color: #fff  
   &--size
-    width: 100%  
     position: relative
+    width: 100%  
+    white-space: normal
   &--ripple-in
-    position: relative  
-    &:before
-      content: ''
-      position: absolute
-      width: 100%
-      height: 100%
-      background-color: #fff
-      top: 0
-      left: 0
-      border-radius: 25px
-      transform: scale(0)
-      opacity: .7
-      animation: ripple-in 3s infinite
+    border-radius: 25px
+    transform: scale(0)
+    animation: ripple-in 6s infinite
 +r(768)   
   .button 
     font: 700 18px/20px $font-helvetica-bold
@@ -72,11 +63,13 @@ a
     position: relative
     .fa
       position: absolute
-      left: 30px
+      left: 25px
       top: 23px      
       color: rgba(30,22,15,0.5)
       font-size: 18px
 .modal
+  -webkit-overflow-scrolling: touch
+  transform: translateZ(0)
   &__small
     width: 290px
     margin: 30px auto
@@ -217,38 +210,18 @@ a
         width: 750px 
         margin: 0 auto
 @keyframes ripple-in
-  0%
-    transform: scale(0)
-
-  2%
-    transform: scale(0)
-
-  3%
-    transform: scale(0)
-
-  20%
-    transform: scale(1)
-    opacity: 0.3
-
-  21%
-    transform: scale(1)
-    opacity: 0.3
-
-  22%
-    transform: scale(1)
-    opacity: 0.3
-
-  98%
-    transform: scale(1)
-    opacity: 0
-
-  99%
-    transform: scale(1)
-    opacity: 0
-
-  100%
-    transform: scale(1)
-    opacity: 0        
+  0, 5%
+    transform: scale3d(1, 1, 1)
+  5%, 10%
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+  15%, 25%, 35%, 45%
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+  20%, 30%, 40%
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+  40%, 50%
+    transform: scale3d(1, 1, 1)
+  51%, 100%
+    transform: scale3d(1, 1, 1)    
 +comment("home page style")
 +comment("nav style")
 .navbar
@@ -519,6 +492,7 @@ a
     font: 400 11px/16px $font-helvetica-medium  
     color: #fff
     margin-top: 20px
+    text-align: center
 +r(768)
   .service  
     background: url(../img/servicebg1200.png) no-repeat 
@@ -1446,7 +1420,10 @@ a
       left: 65px
       height: 256px
       width: 407px
-      top: 47px  
+      top: 47px
+    &__col
+      float: right
+
 +r(1200)
   .oto
     &__iframe
@@ -1454,3 +1431,6 @@ a
       height: 268px
       width: 424px
       top: 40px
++comment('mautic form')
+.mauticform-label
+  display: inline
