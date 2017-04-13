@@ -1,13 +1,6 @@
 (function($) {
   "use strict"; // Start of use strict
 
-  $(window).load(function(){
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-      $('body').addClass('ios');
-    };
-    $('body').removeClass('loaded'); 
-  });
-
   // Old browser notification
   $(function() { 
     $.reject({
