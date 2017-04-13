@@ -33,7 +33,15 @@ gulp.task('scripts', ['bower'], function() {
 gulp.task('pug', function() {
   return gulp.src('app/views/*.pug')
   .pipe($.plumber())
-  .pipe($.pug( {basedir: 'app', pretty: true}))
+  .pipe($.data(function (file) {
+    return {
+      relativePath: file.history[0].replace(file.base, '').split(".")[0]
+    }
+  }))
+  .pipe($.pug({
+    basedir: 'app',
+    pretty: true
+  }))
   .pipe(gulp.dest('app/'))
   .pipe(browserSync.reload({stream: true}));
 });
@@ -256,7 +264,9 @@ gulp.task('dev', ['clean', 'pug', 'fonts', 'sprite', 'img', 'sass', 'scripts'], 
         sortAttributes:                   true,
         sortClassName:                    true,
         removeStyleLinkTypeAttributes:    true,
-        removeScriptTypeAttributes:       true
+        removeScriptTypeAttributes:       true,
+        minifyJS:                         true,
+        minifyCSS:                        true
       })
     ))
     .pipe(gulp.dest('dist'));
