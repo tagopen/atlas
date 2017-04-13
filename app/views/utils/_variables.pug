@@ -1,1 +1,63 @@
-- var title = 'Главная страница'
+- var page = {}
+- var hostname = "" //- site domen name
+
+- 
+  var content = 
+    {
+      site: {
+        hostname: hostname, //- site domen name
+        author: "Tagopen",
+        meta: {
+          charset: "utf8",
+          favicon: "favicon.ico",
+          appleTouchIcon: "apple-touch-icon.png",
+          description: "",
+          keywords: "",
+          openGraph: {
+            title: "ATLAS - умные приставки для телевизора",
+            siteName: "ATLAS - умные приставки для телевизора",
+            description: "Умная приставка ATLAS для телевизора позволит смотреть телеканалы, фильмы и сериалы в HD качестве без абонплаты",
+            type: "website",
+            locale: "ru_RU",
+            image: "microformat.png",
+            imageType: "image/png",
+            url: hostname
+          },
+          twitter: {
+            card: "summary",
+            site: "@flickr",
+            title: "ATLAS - умные приставки для телевизора",
+            description: "Умная приставка ATLAS для телевизора позволит смотреть телеканалы, фильмы и сериалы в HD качестве без абонплаты",
+            image: hostname + "/img/logo/microformat.png"
+          }
+        },
+      }, //- site
+      index: {
+        hostname: "index.html",
+        title: "ATLAS - умные приставки для телевизора",
+      }, //- index
+      magnet: {
+        hostname: "magnet.html",
+        title: "ATLAS - умные приставки для телевизора",
+      }, //- magnet
+      magnetb: {
+        hostname: "magnetb.html",
+        title: "ATLAS - умные приставки для телевизора",
+      }, //- magnetb
+      magnetc: {
+        hostname: "magnetc.html",
+        title: "ATLAS - умные приставки для телевизора",
+      }, //- magnetc
+      magnetd: {
+        hostname: "magnetd.html",
+        title: "ATLAS - умные приставки для телевизора",
+      }, //- magnetd
+      oto: {
+        hostname: "oto.html",
+        title: "ATLAS - умные приставки для телевизора",
+      }, //- oto
+      success: {
+        hostname: "success.html",
+        title: "ATLAS - Спасибо что оставили заявку у нас",
+      }, //- success
+    }
