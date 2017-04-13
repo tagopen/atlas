@@ -1,35 +1,37 @@
 section.service
-  .container
-    .row
-      .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-4
-        h2.heading.service__heading.heading--color Узнайте все 17 возможностей приставки ATLAS BOX PRO 
-      .col-xs-8.col-xs-offset-2.col-sm-4.col-sm-offset-0
-        .service__img
-          img.img-responsive(src='img/service1.png' alt='картинка')
-      .col-xs-12.col-sm-8  
-        .service__content
-          .row
-            .col-xs-12.text-center
-              p.service__text Заполните форму ниже и вы получите PDF файл с описанием всех возможностей этой приставки, и список телеканалов, к которым вы получите доступ . 
-            .col-xs-12
-              #mauticform_wrapper_leadmagnit.mauticform_wrapper
-                form#mauticform_leadmagnit(autocomplete='false', role='form', method='post', action='https://well-done.mautic.net/form/submit?formId=1', data-mautic-form='leadmagnit')
-                  .row
-                    .col-xs-12.col-sm-8.col-sm-offset-2.col-md-12.col-md-offset-0
-                      .row
-                        .form-group.col-xs-12.col-md-offset-3.col-md-6
-                          #mauticform_leadmagnit_error.mauticform-error
-                          #mauticform_leadmagnit_message.mauticform-message
-                          .mauticform-innerform
-                            .mauticform-page-wrapper.mauticform-page-1(data-mautic-form-page='1')
-                              #mauticform_leadmagnit_email.mauticform-row.mauticform-email.mauticform-field-1
-                                label#mauticform_label_leadmagnit_email.mauticform-label(for='mauticform_input_leadmagnit_email')
-                                input#mauticform_input_leadmagnit_email.mauticform-input.form-control.form__input(name='mauticform[email]', value='', required='', placeholder='Введите ваш email', type='email')
-                                i.fa.fa-envelope(aria-hidden='true')
-                                span.mauticform-errormsg(style='display: none;')
-                        .col-xs-12.col-md-9.col-md-offset-2.col-lg-8
-                          #mauticform_leadmagnit_submit.mauticform-row.mauticform-button-wrapper.mauticform-field-2
-                            button#mauticform_input_leadmagnit_submit.mauticform-button.btn.button.button--size.button--ripple-in(type='submit', name='mauticform[submit]', value='') Узнайте все возможности приставки
-                      input#mauticform_leadmagnit_id(type='hidden', name='mauticform[formId]', value='1')
-                      input#mauticform_leadmagnit_return(type='hidden', name='mauticform[return]', value='')
-                      input#mauticform_leadmagnit_name(type='hidden', name='mauticform[formName]', value='leadmagnit')
+    .container
+      .row
+        .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-4
+          h2.heading.service__heading.heading--color Узнайте все 17 возможностей приставки ATLAS BOX PRO 
+        .col-xs-8.col-xs-offset-2.col-sm-4.col-sm-offset-0
+          .service__img
+            img.img-responsive(src='img/service1.png' alt='картинка')
+        .col-xs-12.col-sm-8  
+          .service__content
+            .row
+              .col-xs-12.text-center
+                p.service__text Заполните форму ниже и вы получите PDF файл с описанием всех возможностей этой приставки, и список телеканалов, к которым вы получите доступ . 
+              .col-xs-12
+                #mauticform_wrapper_leadmagnit.mauticform_wrapper
+                  form#mauticform_leadmagnit(autocomplete='false', role='form', method='post', action='https://well-done.mautic.net/form/submit?formId=1', data-mautic-form='leadmagnit')
+                    .row
+                      .col-xs-12.col-sm-10.col-sm-offset-1.col-md-12.col-md-offset-0
+                        .row
+                          .form-group.col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+                            #mauticform_leadmagnit_error.mauticform-error
+                            #mauticform_leadmagnit_message.mauticform-message
+                            .mauticform-innerform
+                              .mauticform-page-wrapper.mauticform-page-1(data-mautic-form-page='1')
+                                #mauticform_leadmagnit_email.mauticform-row.mauticform-email.mauticform-field-1
+                                  label#mauticform_label_leadmagnit_email.mauticform-label(for='mauticform_input_leadmagnit_email')
+                                  input#mauticform_input_leadmagnit_email.mauticform-input.form-control.form__input(name='mauticform[email]', value='', required='', placeholder='Введите ваш email', type='email')
+                                  i.fa.fa-envelope(aria-hidden='true')
+                                  span.mauticform-errormsg(style='display: none;')
+                          .col-xs-12.col-md-9.col-md-offset-2.col-lg-8
+                            #mauticform_leadmagnit_submit.mauticform-row.mauticform-button-wrapper.mauticform-field-2
+                              button#mauticform_input_leadmagnit_submit.mauticform-button.btn.button.button--size.button--ripple-in(type='submit', name='mauticform[submit]', value='') Узнать все возможности приставки
+                              p.service__subtext
+                                | * Гарантируем полную конфиденциальность. Ваши данные не будут переданы третьим лицам
+                        input#mauticform_leadmagnit_id(type='hidden', name='mauticform[formId]', value='1')
+                        input#mauticform_leadmagnit_return(type='hidden', name='mauticform[return]', value='')
+                        input#mauticform_leadmagnit_name(type='hidden', name='mauticform[formName]', value='leadmagnit')

@@ -1,18 +1,21 @@
-nav.navbar
+nav.navbar(class= {"success__navbar": (page.name === 'success'), "success__navbar": (page.name === 'oto')})
   div.container
     .row
-      .col-xs-12.col-sm-8.col-md-6.col-lg-5
+      div(class= (page.name === 'index') ? "col-xs-12 col-sm-8 col-md-6 col-lg-5" : "col-xs-12 col-sm-8 col-md-6")
         .logo
-          a.logo__img(href='#')
-            img.img-responsive.visible-xs(src='img/logo/logo320.png' alt='logo')
-            img.img-responsive.hidden-xs(src='img/logo/logo.png' alt='logo')
-          .logo__text Магазин умных приставок
-            br 
-            | для телевизоров    
-      .col-xs-12.col-sm-5.col-md-3.col-lg-4
-        .phone
-          a.phone__link(href="tel:+380673843732") 
-            i.fa.fa-phone(aria-hidden="true")
-            | +38 (067) 384 37 32   
-      .hidden-xs.col-sm-4.col-md-3.navbar__col
-        button.btn.button.navbar__button(data-toggle="modal" data-target="#nav__modal") заказать звонок    
+          #{(page.name === 'index')?'div':'a'}.logo__img(href=content.site.navbar.logo.link)
+            img.img-responsive.visible-xs(src=content.site.navbar.logo.img.xs, alt=content.site.navbar.logo.img.alt)
+            img.img-responsive.hidden-xs(src=content.site.navbar.logo.img.lg, alt=content.site.navbar.logo.img.alt)
+          .logo__text!= content.site.navbar.logo.text
+      if (page.name === 'success')
+        .col-xs-12.col-sm-4.col-md-3.navbar__col.pull-right
+          a.btn.button.navbar__button(href="./") На главную
+      unless ((page.name === 'success') || (page.name === 'oto'))
+        div(class= (page.name === 'index') ? "col-xs-12 col-sm-5 col-md-3 col-lg-4" : "col-xs-12 col-sm-4 col-md-6")
+          .phone
+            a.phone__link(href=content.site.navbar.phone.link) 
+              i.fa.fa-phone(aria-hidden="true")
+              != content.site.navbar.phone.name 
+      if (page.name === 'index')
+        .hidden-xs.col-sm-4.col-md-3.navbar__col
+          button.btn.button.navbar__button(data-toggle="modal" data-target="#nav__modal") заказать звонок

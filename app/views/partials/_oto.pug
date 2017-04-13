@@ -1,0 +1,32 @@
+.oto  
+  .container
+    .row
+      .col-xs-12.col-sm-10.col-sm-offset-1
+        p.oto__heading!= page.heading
+    .row
+      .col-xs-12.col-md-7.col-md-offset-0.col-lg-6.oto__col
+        .oto__video
+          iframe.oto__iframe(src='https://www.youtube.com/embed/qVWlgEPCbVM?autoplay=1', frameborder='0', allowfullscreen='')
+      .col-xs-12.col-sm-10.col-sm-offset-1.col-md-5.col-md-offset-0.col-lg-6
+        .modal-content.modal__content.oto__modal
+          .modal__head
+            p.modal__text.oto__text
+              | Заполните форму, чтобы сэкономить 540 грн и получить бесплатную доставку, установку и настройку приставки у вас дома!
+          form.contactForm.modal__form(method='post', action='./mail/mail.php')
+            .row
+              .col-xs-12
+                .row
+                  .col-xs-12.col-sm-8.col-sm-offset-2.col-md-12.col-md-offset-0
+                    .row
+                      .form-group.col-xs-12
+                        input.form-control.form__input.form__phone.form__input--phone(aria-invalid='false', placeholder='+38(___)___-__-__', required, data-validation-required-message='Заполните поле корректно.', name='phone', type='tel')
+                        i.fa.fa-phone(aria-hidden="true")
+                        p.help-block.text-danger
+                      .clearfix
+                        .success
+                  .col-xs-12
+                    .text-center
+                      button.btn.button.button--size.oto__btn(name='form[ОТО страница]', type='submit', data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...") Воспользоваться предложением и сэкономить 540 грн
+                      p.modal__subtext.oto__text
+                        i.fa.fa-lock(aria-hidden='true')
+                        | Гарантируем полную конфиденциальность ваших данных

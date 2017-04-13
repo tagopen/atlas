@@ -2,6 +2,7 @@ include ../utils/_variables.pug
 each value, key in content
   if (relativePath === key)
     - page = value
+    - page.name = key
 unless (page.meta)
   - page.meta = content.site.meta
 block variables

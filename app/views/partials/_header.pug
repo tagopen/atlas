@@ -3,13 +3,15 @@ header.header
     .row
       .col-xs-7
         .header__text 
-          h1.header__text--span Умная приставка ATLAS для телевизора позволит смотреть телеканалы, фильмы и сериалы в HD качестве без абонплаты
+          h1.header__text--span!= page.h1
+          - var text = (page.header) ? page.header.text : content.site.header.text
       .col-xs-5.col-sm-4
         .header__image
-          img.img-responsive(src='img/headerimg1200.png' alt='приставка')    
+          img.img-responsive(src=content.site.header.image.link, alt=content.site.header.image.alt)    
       .col-xs-12.col-sm-7.header__col
-        .header__text Сделай заказ сегодня и уже завтра твой телевизор станет мощным SmartTV 
-          span.header__text--span всего за 1960грн  
+        .header__text!= text.p
+          if (text.span)
+            span.header__text--span!= text.span
     .row      
       .col-xs-12.col-sm-8.col-md-6   
         button.btn.button.button--size.button--ripple-in(data-toggle="modal" data-target="#header__modal") узнайте все возможности приставки  

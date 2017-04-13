@@ -7,24 +7,7 @@ block styles
 block scripts
 
 block content
-  div.success
-    nav.navbar.success__navbar
-      div.container
-        .row
-          .col-xs-12.col-sm-8.col-md-6
-            .logo
-              a.logo__img(href='#')
-                img.img-responsive.visible-xs(src='img/logo/logo320.png' alt='logo')
-                img.img-responsive.hidden-xs(src='img/logo/logo.png' alt='logo')
-              .logo__text Магазин умных приставок
-                br 
-                | для телевизоров    
-          .col-xs-12.col-sm-4.col-md-3.navbar__col.pull-right
-            a.btn.button.navbar__button(href="./") На главную   
-    .success__content   
-      .container
-        .row
-          .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
-            p.success__text Спасибо, что обратились к нам! Мы свяжемся с вами в ближайшее время! А пока, посмотрите видео о том, где смотреть фильмы и сериалы после закрытия FS.TO    
-            .success__video
-              iframe.success__iframe(src="https://www.youtube.com/embed/2gqHfZyEYmE" frameborder="0" allowfullscreen)
+  article.success
+    include components/_nav.pug
+    include partials/_success.pug
+    
